@@ -1,2 +1,2 @@
-# modular-data-collection-system
+# Bachelor Thesis Mona Kögel
 In her thesis Mona Kögel investigated a design system for forms that is engineered to a high UX- and accessibility-standard. By creating a catalog of separate widgets which can be combined into a complete form makes the development easy enough so even non-programmers can construct and maintain such forms. Also the form changes dynamically, depending on what information the user has already given, so he spends less time on answering questions that are not concerning to him. To support the research on this topic she created a prototype. With this was tested if someone with minimal technical knowledge can build a simple form with this kind of design system.
