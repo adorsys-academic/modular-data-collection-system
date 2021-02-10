@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import "/assets/themes/variable";
+
+@font-face {
+  font-family: URWGeometricBold;
+  src: url("/assets/fonts/URW Geometric Family-2/URW Geometric Family/URW++ - URWGeometric-Bold.otf");
+}
+
+@font-face {
+  font-family: URWGeometricExtraBold;
+  src: url("/assets/fonts/URW Geometric Family-2/URW Geometric Family/URW++ - URWGeometric-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: URWGeometricSemiBold;
+  src: url("/assets/fonts/URW Geometric Family-2/URW Geometric Family/URW++ - URWGeometric-SemiBold.otf");
+}
+
+h1,
+.h1,
+.logo {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 70px;
+  color: $WHITE;
+  text-align: center;
+}
+
+h2,
+.h2,
+.headline {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 45px;
+  color: $GRAY-DARK;
+  text-align: center;
+}
+
+h3,
+.button-text {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 35px;
+  color: $WHITE;
+  text-align: center;
+  margin: 0;
+}
+
+p,
+.p,
+.text {
+  font-family: URWGeometricSemiBold, sans-serif;
+  font-size: 30px;
+  color: $GRAY-DARK;
+  text-align: center;
+}
+
+label,
+.label {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 25px;
+  color: $GRAY-DARK;
+}
