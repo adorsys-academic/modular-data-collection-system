@@ -1,0 +1,17 @@
+@import "/../../../assets/themes/variable";
+
+button,
+.button {
+  border-radius: 15px;
+  border: none;
+  padding: 1em 4em 1em 4em;
+  margin: 1em;
+
+  &--primary {
+    background-color: $BLUE-PRIMARY;
+  }
+
+  &--secondary {
+    background-color: $GRAY-MEDIUM;
+  }
+}
