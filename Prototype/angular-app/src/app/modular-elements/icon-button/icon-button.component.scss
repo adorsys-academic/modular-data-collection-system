@@ -1,0 +1,17 @@
+@import "/../../../assets/themes/variable";
+
+.icon-button {
+  border-radius: 15px;
+  border: none;
+  width: 150px;
+  height: 150px;
+  margin: 1em;
+
+  &--primary {
+    background-color: $BLUE-PRIMARY;
+  }
+
+  &--secondary {
+    background-color: $GRAY-MEDIUM;
+  }
+}

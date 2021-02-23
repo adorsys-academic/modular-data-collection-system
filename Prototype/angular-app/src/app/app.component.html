@@ -8,6 +8,10 @@
     H2 Headline
   </h2>
 
+  <h3>
+    H3 Element Headline
+  </h3>
+
   <p>
     P Text
   </p>
@@ -16,30 +20,60 @@
     Label Text
   </label>
 
-  <h3>
-    H3 Button
-  </h3>
+  <h4>
+    H4 Button
+  </h4>
 
 </div>
 
-<app-button [buttonClass]="btnCls" [buttonText]="btnTxt"></app-button>
+<div>
 
-<input [(ngModel)]="btnTxt" type="text" placeholder="change Button Text">
+  <app-button [buttonClass]="btnCls" [buttonText]="btnTxt"></app-button>
 
-<input
-  [(ngModel)]="btnCls"
-  type="radio"
-  id="primary"
-  value="button button--primary"
->
-<label for="primary">Primary</label>
-<input
-  [(ngModel)]="btnCls"
-  type="radio"
-  id="secondary"
-  value="button button--secondary"
->
-<label for="secondary">Secondary</label><br>
+  <input [(ngModel)]="btnTxt" type="text" placeholder="change Button Text">
+
+  <input
+    [(ngModel)]="btnCls"
+    type="radio"
+    id="primary"
+    value="button button--primary"
+  >
+  <label for="primary">Primary</label>
+  <input
+    [(ngModel)]="btnCls"
+    type="radio"
+    id="secondary"
+    value="button button--secondary"
+  >
+  <label for="secondary">Secondary</label><br>
+
+</div>
+
+<div>
+  <app-toggle-button></app-toggle-button>
+</div>
+
+<div>
+  <app-icon-button
+    [iconButtonClass]="'icon-button icon-button--primary'"
+    [iconButtonImg]="'assets/icons/car.svg'"
+  ></app-icon-button>
+  <app-icon-button
+    [iconButtonClass]="'icon-button icon-button--primary'"
+    [iconButtonImg]="'assets/icons/bike.svg'"
+  ></app-icon-button>
+</div>
+
+<div>
+  <app-circle-button
+    [circleButtonClass]="'circle-button circle-button--primary'"
+    [circleButtonImg]="'assets/icons/plus.svg'"
+  ></app-circle-button>
+  <app-circle-button
+    [circleButtonClass]="'circle-button circle-button--primary'"
+    [circleButtonImg]="'assets/icons/arrow_right.svg'"
+  ></app-circle-button>
+</div>
 
 
 

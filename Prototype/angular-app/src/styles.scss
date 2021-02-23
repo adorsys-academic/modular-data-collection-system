@@ -34,6 +34,14 @@ h2,
 }
 
 h3,
+.h3,
+.element-headline {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 35px;
+  color: $GRAY-DARK;
+}
+
+h4,
 .button-text {
   font-family: URWGeometricBold, sans-serif;
   font-size: 35px;
