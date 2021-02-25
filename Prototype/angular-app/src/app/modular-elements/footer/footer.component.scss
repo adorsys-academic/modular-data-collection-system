@@ -1,0 +1,15 @@
+@import "/../../../assets/themes/variable";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: $WHITE;
+  margin: 0;
+  height: 60px;
+
+  &__text {
+    margin: 0 1.5em 0 1.5em;
+  }
+}

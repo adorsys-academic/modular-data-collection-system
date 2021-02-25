@@ -15,11 +15,16 @@
   src: url("/assets/fonts/URW Geometric Family-2/URW Geometric Family/URW++ - URWGeometric-SemiBold.otf");
 }
 
+body,
+.body {
+  margin: 0;
+}
+
 h1,
 .h1,
 .logo {
   font-family: URWGeometricBold, sans-serif;
-  font-size: 70px;
+  font-size: 45px;
   color: $WHITE;
   text-align: center;
 }
@@ -28,7 +33,7 @@ h2,
 .h2,
 .headline {
   font-family: URWGeometricBold, sans-serif;
-  font-size: 45px;
+  font-size: 30px;
   color: $GRAY-DARK;
   text-align: center;
 }
@@ -37,14 +42,14 @@ h3,
 .h3,
 .element-headline {
   font-family: URWGeometricBold, sans-serif;
-  font-size: 35px;
+  font-size: 22px;
   color: $GRAY-DARK;
 }
 
 h4,
 .button-text {
   font-family: URWGeometricBold, sans-serif;
-  font-size: 35px;
+  font-size: 20px;
   color: $WHITE;
   text-align: center;
   margin: 0;
@@ -54,7 +59,7 @@ p,
 .p,
 .text {
   font-family: URWGeometricSemiBold, sans-serif;
-  font-size: 30px;
+  font-size: 18px;
   color: $GRAY-DARK;
   text-align: center;
 }
@@ -62,6 +67,12 @@ p,
 label,
 .label {
   font-family: URWGeometricBold, sans-serif;
-  font-size: 25px;
+  font-size: 14px;
   color: $GRAY-DARK;
+}
+
+.icon-font {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 20px;
+  color: $WHITE;
 }

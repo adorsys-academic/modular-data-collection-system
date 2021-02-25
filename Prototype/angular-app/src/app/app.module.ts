@@ -7,6 +7,8 @@ import { ButtonComponent } from './modular-elements/button/button.component';
 import { IconButtonComponent } from './modular-elements/icon-button/icon-button.component';
 import { ToggleButtonComponent } from './modular-elements/toggle-button/toggle-button.component';
 import { CircleButtonComponent } from './modular-elements/circle-button/circle-button.component';
+import { HeaderComponent } from './modular-elements/header/header.component';
+import { FooterComponent } from './modular-elements/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CircleButtonComponent } from './modular-elements/circle-button/circle-b
     ButtonComponent,
     IconButtonComponent,
     ToggleButtonComponent,
-    CircleButtonComponent
+    CircleButtonComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

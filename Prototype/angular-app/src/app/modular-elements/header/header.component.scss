@@ -1,0 +1,20 @@
+@import "/../../../assets/themes/variable";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $BLUE-PRIMARY;
+  margin: 0;
+  height: 100px;
+
+  &__logo {
+    height: 70%;
+    width: auto;
+    margin: 0 0.5em 0 1em;
+  }
+
+  &__text {
+    margin: 0.3em 0 0 0.3em;
+  }
+}

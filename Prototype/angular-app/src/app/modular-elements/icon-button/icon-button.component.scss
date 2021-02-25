@@ -1,11 +1,17 @@
 @import "/../../../assets/themes/variable";
 
 .icon-button {
+  cursor: pointer;
   border-radius: 15px;
   border: none;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin: 1em;
+
+  &__icon {
+    height: 90%;
+    width: 90%;
+  }
 
   &--primary {
     background-color: $BLUE-PRIMARY;

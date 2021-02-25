@@ -2,9 +2,10 @@
 
 button,
 .button {
+  cursor: pointer;
   border-radius: 15px;
   border: none;
-  padding: 1em 4em 1em 4em;
+  padding: 1em 2em 1em 2em;
   margin: 1em;
 
   &--primary {
