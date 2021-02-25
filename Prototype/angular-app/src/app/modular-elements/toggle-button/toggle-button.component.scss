@@ -61,6 +61,9 @@ input:checked + .slider:before {
 }
 
 .on, .off {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 20px;
+  color: $WHITE;
   position: absolute;
   transform: translate(-50%,-50%);
   top: 60%;

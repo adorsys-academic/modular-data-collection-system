@@ -1,0 +1,27 @@
+@import "/../../../assets/themes/variable";
+
+.dropdown-field {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+
+  &__label {
+    margin: 0 0 0.3em 1.5em;
+  }
+
+  &__select,
+  select {
+    border-radius: 10px;
+    border: 1.5px solid $GRAY-DARK;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin: 0 0 2em 1em;
+    font-family: URWGeometricSemiBold, sans-serif;
+    font-size: 18px;
+    color: #142542;
+  }
+
+  select:focus {
+    border: 1.5px solid $BLUE-PRIMARY;
+    outline-width: 0;
+  }
+}

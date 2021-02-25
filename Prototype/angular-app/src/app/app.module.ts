@@ -9,6 +9,9 @@ import { ToggleButtonComponent } from './modular-elements/toggle-button/toggle-b
 import { CircleButtonComponent } from './modular-elements/circle-button/circle-button.component';
 import { HeaderComponent } from './modular-elements/header/header.component';
 import { FooterComponent } from './modular-elements/footer/footer.component';
+import { SectionBarComponent } from './modular-elements/section-bar/section-bar.component';
+import { TextFieldComponent } from './modular-elements/text-field/text-field.component';
+import { DropdownFieldComponent } from './modular-elements/dropdown-field/dropdown-field.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FooterComponent } from './modular-elements/footer/footer.component';
     ToggleButtonComponent,
     CircleButtonComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SectionBarComponent,
+    TextFieldComponent,
+    DropdownFieldComponent
   ],
   imports: [
     BrowserModule,
