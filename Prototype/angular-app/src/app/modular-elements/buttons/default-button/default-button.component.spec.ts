@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CircleButtonComponent } from './circle-button.component';
+import { DefaultButtonComponent } from './default-button.component';
 
-describe('CircleButtonComponent', () => {
-  let component: CircleButtonComponent;
-  let fixture: ComponentFixture<CircleButtonComponent>;
+describe('DefaultButtonComponent', () => {
+  let component: DefaultButtonComponent;
+  let fixture: ComponentFixture<DefaultButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CircleButtonComponent ]
+      declarations: [ DefaultButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CircleButtonComponent);
+    fixture = TestBed.createComponent(DefaultButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

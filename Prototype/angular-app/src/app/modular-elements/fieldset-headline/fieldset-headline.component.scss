@@ -1,0 +1,18 @@
+@import "/../../../assets/themes/variable";
+
+.fieldset-headline {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    margin: 0 1em 0 1em;
+  }
+
+  &__line {
+    background-color: $GRAY-LIGHT;
+    width: auto;
+    height: 3px;
+    border-radius: 3px;
+    margin: 0 2em 2em 1.2em;
+  }
+}

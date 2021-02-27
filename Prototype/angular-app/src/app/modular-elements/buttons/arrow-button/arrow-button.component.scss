@@ -1,6 +1,6 @@
-@import "/../../../assets/themes/variable";
+@import "/../../../../assets/themes/variable";
 
-.circle-button {
+.arrow-button {
   cursor: pointer;
   border-radius: 50%;
   border: none;
@@ -10,7 +10,7 @@
 
   &__icon {
     height: 60%;
-    width: auto;
+    width: 60%;
   }
 
   &--primary {
@@ -19,5 +19,17 @@
 
   &--secondary {
     background-color: $GRAY-MEDIUM;
+  }
+
+  &:hover {
+    background-color: $BLUE-SECONDARY;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+
+  &:active {
+
   }
 }

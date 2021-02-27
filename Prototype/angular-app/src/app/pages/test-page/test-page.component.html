@@ -1,0 +1,95 @@
+<app-header></app-header>
+
+<app-section-bar></app-section-bar>
+
+<app-fieldset-headline [fieldsetHeadlineText]="'Headline'"></app-fieldset-headline>
+
+<app-text-field [textFieldLabel]="'Label'"></app-text-field>
+
+<app-seperator></app-seperator>
+
+<app-dropdown-field [dropdownFieldLabel]="'Label'"></app-dropdown-field>
+
+<div style="background-color: #84A0BA">
+
+  <h1>
+    H1 Logo
+  </h1>
+
+  <h2>
+    H2 Headline
+  </h2>
+
+  <h3>
+    H3 Element Headline
+  </h3>
+
+  <p>
+    P Text
+  </p>
+
+  <label>
+    Label Text
+  </label>
+
+  <h4>
+    H4 Button
+  </h4>
+
+</div>
+
+<div>
+
+  <app-default-button [buttonClass]="btnCls" [buttonText]="btnTxt"></app-default-button>
+
+  <input [(ngModel)]="btnTxt" type="text">
+
+  <input
+    [(ngModel)]="btnCls"
+    type="radio"
+    id="primary"
+    value="button button--primary"
+  >
+  <label for="primary">Primary</label>
+  <input
+    [(ngModel)]="btnCls"
+    type="radio"
+    id="secondary"
+    value="button button--secondary"
+  >
+  <label for="secondary">Secondary</label><br>
+
+</div>
+
+<div>
+  <app-toggle-button [toggleButtonLabel]="'Label'"></app-toggle-button>
+</div>
+
+<div>
+  <app-icon-button
+    [iconButtonClass]="'icon-button__button icon-button__button--primary'"
+    [iconButtonImg]="'assets/icons/car.svg'"
+    [iconButtonLabel]="'Label'"
+  ></app-icon-button>
+  <app-icon-button
+    [iconButtonClass]="'icon-button__button icon-button__button--primary'"
+    [iconButtonImg]="'assets/icons/bike.svg'"
+    [iconButtonLabel]="'Label'"
+  ></app-icon-button>
+</div>
+
+<div>
+  <app-plus-button
+    [plusButtonClass]="'plus-button__button plus-button__button--primary'"
+    [plusButtonLabel]="'Label'"
+  ></app-plus-button>
+</div>
+
+<div>
+  <app-arrow-button
+    [arrowButtonClass]="'arrow-button arrow-button--primary'"
+    [arrowButtonImg]="'assets/icons/arrow_right.svg'"
+  ></app-arrow-button>
+</div>
+
+<app-footer></app-footer>

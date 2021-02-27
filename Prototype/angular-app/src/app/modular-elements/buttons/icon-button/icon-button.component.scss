@@ -1,4 +1,4 @@
-@import "/../../../assets/themes/variable";
+@import "/../../../../assets/themes/variable";
 
 .icon-button {
   display: flex;
@@ -19,6 +19,18 @@
 
     &--secondary {
       background-color: $GRAY-MEDIUM;
+    }
+
+    &:hover {
+      background-color: $BLUE-SECONDARY;
+    }
+
+    &:focus {
+      outline-width: 0;
+    }
+
+    &:active {
+
     }
   }
 

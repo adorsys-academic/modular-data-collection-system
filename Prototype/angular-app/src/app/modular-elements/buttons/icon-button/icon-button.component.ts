@@ -9,6 +9,7 @@ export class IconButtonComponent implements OnInit {
 
   @Input() iconButtonClass:string;
   @Input() iconButtonImg:string;
+  @Input() iconButtonLabel:string;
 
   constructor() { }
 

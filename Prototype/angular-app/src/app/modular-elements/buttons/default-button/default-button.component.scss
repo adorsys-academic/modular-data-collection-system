@@ -1,0 +1,39 @@
+@import "/../../../../assets/themes/variable";
+
+button,
+.button {
+  cursor: pointer;
+  border-radius: 15px;
+  color: $WHITE;
+  padding: 1em 2em 1em 2em;
+  margin: 1em;
+
+  &--primary {
+    background-color: $BLUE-PRIMARY;
+    border: 2px solid $BLUE-PRIMARY;
+  }
+
+  &--secondary {
+    background-color: $GRAY-MEDIUM;
+    border: 2px solid $GRAY-MEDIUM;
+  }
+
+  &:hover {
+    background-color: $WHITE;
+    color: $BLUE-PRIMARY;
+    border-radius: 15px;
+    border: 2px solid $BLUE-PRIMARY;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+
+  &:active {
+
+  }
+}
+

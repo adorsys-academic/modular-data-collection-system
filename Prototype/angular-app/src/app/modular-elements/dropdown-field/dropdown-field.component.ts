@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-dropdown-field',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown-field.component.scss']
 })
 export class DropdownFieldComponent implements OnInit {
+
+  @Input() dropdownFieldLabel:string;
 
   constructor() { }
 
