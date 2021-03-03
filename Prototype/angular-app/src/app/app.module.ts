@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { DefaultButtonComponent } from './modular-elements/buttons/default-button/default-button.component';
@@ -19,6 +23,7 @@ import { TestPageComponent } from './pages/test-page/test-page.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { BuildingKitPageComponent } from './pages/building-kit-page/building-kit-page.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StepperComponent } from './angular-material-elements/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +42,18 @@ import { AppRoutingModule } from './app-routing.module';
     SeperatorComponent,
     TestPageComponent,
     FormPageComponent,
-    BuildingKitPageComponent
+    BuildingKitPageComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
