@@ -1,13 +1,53 @@
 <div class="building-kit">
-  <div class="building-kit__elements">
-    <h2>Formular Elemente:</h2>
-    <app-fieldset-headline [fieldsetHeadlineText]="'Headline'" cdkDrag></app-fieldset-headline>
 
-    <app-text-field [textFieldLabel]="'Label'" cdkDrag></app-text-field>
+  <ng-container cdkDropListGroup>
 
-    <app-dropdown-field [dropdownFieldLabel]="'Label'" cdkDrag></app-dropdown-field>
-  </div>
-  <div class="building-kit__form">
-    <h2>Formular:</h2>
-  </div>
+    <div class="example-container building-kit__elements">
+      <h2>Formular Elemente: (Sidebar)</h2>
+
+      <div
+        cdkDropList
+        #sidebarList="cdkDropList"
+        [cdkDropListData]="sidebar"
+        cdkDropListConnectedTo="[mainList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+
+        <div class="example-box" cdkDrag>
+          <app-fieldset-headline [fieldsetHeadlineText]="'Headline'" cdkDrag></app-fieldset-headline>
+        </div>
+
+        <div class="example-box" cdkDrag>
+          <app-text-field [textFieldLabel]="'Label'" cdkDrag></app-text-field>
+        </div>
+
+        <div class="example-box" cdkDrag>
+          <app-dropdown-field [dropdownFieldLabel]="'Label'" cdkDrag></app-dropdown-field>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="example-container building-kit__form">
+      <h2>Formular: (Main)</h2>
+
+      <div
+        cdkDropList
+        #mainList="cdkDropList"
+        [cdkDropListData]="main"
+        cdkDropListConnectedTo="[sidebarList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+
+      </div>
+
+    </div>
+
+  </ng-container>
+
 </div>

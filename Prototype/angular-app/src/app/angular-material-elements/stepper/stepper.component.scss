@@ -1,1 +1,33 @@
+@import "./../../../assets/themes/variable";
 
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: $GRAY-MEDIUM;
+  margin: 0 !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+}
+
+::ng-deep .mat-step-icon-content {
+  font-family: URWGeometricBold, sans-serif;
+  font-size: 25px;
+  color: $WHITE;
+  margin-top: 0.2em;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: $BLUE-PRIMARY;
+}
+
+::ng-deep .mat-step-label {
+  display: none;
+  min-width: 0 !important;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+  background-color: $GRAY-MEDIUM;
+  width: 50px;
+  height: 4px !important;
+  border-radius: 4px;
+}
