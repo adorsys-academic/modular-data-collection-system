@@ -1,8 +1,18 @@
 @import "./../../../assets/themes/variable";
 
+::ng-deep .mat-stepper-horizontal {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+::ng-deep .mat-horizontal-stepper-header{
+  pointer-events: none !important;
+}
+
 ::ng-deep .mat-step-header .mat-step-icon {
   background-color: $GRAY-MEDIUM;
-  margin: 0 !important;
+  margin: 1em 0.2em 1em 0.2em !important;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -30,4 +40,16 @@
   width: 50px;
   height: 4px !important;
   border-radius: 4px;
+  border-top: none !important;
+}
+
+::ng-deep .mat-button {
+  background-color: $BLUE-PRIMARY;
+  cursor: pointer;
+  font-family: URWGeometricSemiBold, sans-serif;
+  font-size: 18px;
+  border-radius: 10px !important;
+  color: $WHITE;
+  padding: 0.3em 5vw 0.1em 5vw !important;
+  margin: 1em !important;
 }

@@ -1,28 +1,23 @@
 <mat-horizontal-stepper [linear]=true #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+
+  <mat-step [stepControl]="'stepOne'">
+    <app-step-one></app-step-one>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <mat-form-field>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+
+  <mat-step [stepControl]="'stepTwo'">
+    <app-step-two></app-step-two>
   </mat-step>
-  <mat-step>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
+
+  <mat-step [stepControl]="'stepThree'">
+    <app-step-three></app-step-three>
   </mat-step>
+
+  <mat-step [stepControl]="'stepFour'">
+    <app-step-four></app-step-four>
+  </mat-step>
+
+  <mat-step [stepControl]="'stepFive'">
+    <app-step-five></app-step-five>
+  </mat-step>
+
 </mat-horizontal-stepper>

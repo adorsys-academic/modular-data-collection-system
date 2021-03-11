@@ -1,0 +1,51 @@
+@import "./../../../assets/themes/variable";
+
+::ng-deep .mat-button {
+  background-color: $BLUE-PRIMARY;
+  cursor: pointer;
+  font-family: URWGeometricSemiBold, sans-serif;
+  font-size: 18px;
+  border-radius: 10px !important;
+  color: $WHITE;
+  padding: 0.3em 5vw 0.1em 5vw !important;
+  margin: 1em !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $GRAY-LIGHT;
+  min-height: 100vh;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $WHITE;
+    padding: 1em;
+    margin: 3em 10vw 3em 10vw;
+    border-radius: 15px;
+    border: none;
+
+    &__circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $BLUE-PRIMARY;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 0 1em 0;
+
+      &__icon {
+        width: 70%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      max-width: 20em;
+    }
+  }
+}

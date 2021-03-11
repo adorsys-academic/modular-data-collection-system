@@ -26,6 +26,12 @@ import { FormPageComponent } from './pages/form-page/form-page.component';
 import { BuildingKitPageComponent } from './pages/building-kit-page/building-kit-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StepperComponent } from './angular-material-elements/stepper/stepper.component';
+import { StartPageComponent } from './pages/start-page/start-page.component';
+import { StepOneComponent } from './pages/form-steps/step-one/step-one.component';
+import { StepTwoComponent } from './pages/form-steps/step-two/step-two.component';
+import { StepThreeComponent } from './pages/form-steps/step-three/step-three.component';
+import { StepFourComponent } from './pages/form-steps/step-four/step-four.component';
+import { StepFiveComponent } from './pages/form-steps/step-five/step-five.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +51,13 @@ import { StepperComponent } from './angular-material-elements/stepper/stepper.co
     TestPageComponent,
     FormPageComponent,
     BuildingKitPageComponent,
-    StepperComponent
+    StepperComponent,
+    StartPageComponent,
+    StepOneComponent,
+    StepTwoComponent,
+    StepThreeComponent,
+    StepFourComponent,
+    StepFiveComponent
   ],
   imports: [
     BrowserModule,
