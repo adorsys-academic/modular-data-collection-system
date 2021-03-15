@@ -20,7 +20,7 @@
     &__icon {
       height: 55%;
       width: auto;
-      margin-top: 0.2em;
+      margin-bottom: 0.1em;
     }
 
     &--primary {
@@ -29,18 +29,6 @@
 
     &--secondary {
       background-color: $GRAY-MEDIUM;
-    }
-
-    &:hover {
-      background-color: $BLUE-SECONDARY;
-    }
-
-    &:focus {
-      outline-width: 0;
-    }
-
-    &:active {
-
     }
   }
 

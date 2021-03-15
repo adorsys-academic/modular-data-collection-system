@@ -5,15 +5,15 @@
   flex-direction: column;
 
   &--tiny {
-    width: 120px;
+    width: 150px;
   }
 
   &--small {
-    width: 200px;
+    width: 250px;
   }
 
   &--medium {
-    width: 300px;
+    width: 350px;
   }
 
   &--large {
@@ -38,6 +38,11 @@
 
   input:focus {
     border: 1.5px solid $BLUE-PRIMARY;
+    outline-width: 0;
+  }
+
+  input:read-only {
+    border: 1.5px solid $GRAY-MEDIUM;
     outline-width: 0;
   }
 }

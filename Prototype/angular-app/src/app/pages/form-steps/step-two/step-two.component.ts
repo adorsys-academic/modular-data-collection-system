@@ -14,7 +14,10 @@ export class StepTwoComponent implements OnInit {
     private formService: FormService
   ) {
     this.step = this._formBuilder.group({
-      address: ['', Validators.required]
+      workStreet: ['', Validators.required],
+      workHouseNr: ['', Validators.required],
+      workPlz: ['', Validators.required],
+      workPlace: ['', Validators.required]
     });
     this.formService.stepReady(this.step, 'two')
   }

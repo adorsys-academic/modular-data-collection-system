@@ -4,7 +4,11 @@
 
 <app-fieldset-headline [fieldsetHeadlineText]="'Headline'"></app-fieldset-headline>
 
-<app-text-field [textFieldLabel]="'Label'"></app-text-field>
+<app-text-field
+  [textFieldLabel]="'Label'"
+  [textFieldClass]="'text-field text-field--large'"
+  [textFieldControl]="'txt-field'"
+></app-text-field>
 
 <app-seperator></app-seperator>
 
@@ -90,6 +94,58 @@
     [arrowButtonClass]="'arrow-button arrow-button--primary'"
     [arrowButtonImg]="'assets/icons/arrow_right.svg'"
   ></app-arrow-button>
+</div>
+
+<div>
+  <app-help-button
+    [helpButtonClass]="'help-button help-button--primary'"
+  ></app-help-button>
+</div>
+
+<!--<div style="display: flex; flex-direction: row">
+  <app-radio-element
+    [radioElementId]="'car'"
+    [radioElementLabelAndValue]="'Auto'"
+    [radioElementImg]="'assets/icons/car.svg'"
+  ></app-radio-element>
+  <app-radio-element
+    [radioElementId]="'bus'"
+    [radioElementLabelAndValue]="'Bus'"
+    [radioElementImg]="'assets/icons/bus.svg'"
+  ></app-radio-element>
+  <app-radio-element
+    [radioElementId]="'bike'"
+    [radioElementLabelAndValue]="'Fahrrad'"
+    [radioElementImg]="'assets/icons/bike.svg'"
+  ></app-radio-element>
+  <app-radio-element
+    [radioElementId]="'feet'"
+    [radioElementLabelAndValue]="'Zu Fuß'"
+    [radioElementImg]="'assets/icons/feet.svg'"
+  ></app-radio-element>
+</div>-->
+
+<div style="display: flex; flex-direction: row">
+  <app-checkbox-element
+    [checkboxElementId]="'car'"
+    [checkboxElementLabelAndValue]="'Auto'"
+    [checkboxElementImg]="'assets/icons/car.svg'"
+  ></app-checkbox-element>
+  <app-checkbox-element
+    [checkboxElementId]="'bus'"
+    [checkboxElementLabelAndValue]="'Bus'"
+    [checkboxElementImg]="'assets/icons/bus.svg'"
+  ></app-checkbox-element>
+  <app-checkbox-element
+    [checkboxElementId]="'bike'"
+    [checkboxElementLabelAndValue]="'Fahrrad'"
+    [checkboxElementImg]="'assets/icons/bike.svg'"
+  ></app-checkbox-element>
+  <app-checkbox-element
+    [checkboxElementId]="'feet'"
+    [checkboxElementLabelAndValue]="'Zu Fuß'"
+    [checkboxElementImg]="'assets/icons/feet.svg'"
+  ></app-checkbox-element>
 </div>
 
 <app-footer></app-footer>

@@ -1,5 +1,9 @@
 @import "./../../../../assets/themes/variable";
 
+::ng-deep .mat-button {
+
+}
+
 .icon-button {
   display: flex;
   flex-direction: column;
@@ -22,7 +26,7 @@
     }
 
     &:hover {
-      background-color: $BLUE-SECONDARY;
+      //background-color: $BLUE-SECONDARY;
     }
 
     &:focus {
@@ -35,8 +39,8 @@
   }
 
   &__icon {
-    height: 90%;
-    width: 90%;
+    height: 80%;
+    width: 80%;
   }
 
   &__label {

@@ -1,6 +1,6 @@
 @import "./../../../../assets/themes/variable";
 
-.arrow-button {
+.help-button {
   cursor: pointer;
   border-radius: 50%;
   border: none;
@@ -11,8 +11,7 @@
   &__icon {
     height: 60%;
     width: 60%;
-    margin-bottom: 0.2em;
-    margin-left: 0.2em;
+    margin-bottom: 0.1em;
   }
 
   &--primary {

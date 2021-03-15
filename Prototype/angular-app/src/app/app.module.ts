@@ -14,6 +14,7 @@ import { IconButtonComponent } from './modular-elements/buttons/icon-button/icon
 import { ToggleButtonComponent } from './modular-elements/buttons/toggle-button/toggle-button.component';
 import { PlusButtonComponent } from './modular-elements/buttons/plus-button/plus-button.component';
 import { HeaderComponent } from './modular-elements/header/header.component';
+import { HelpButtonComponent } from "./modular-elements/buttons/help-button/help-button.component";
 import { FooterComponent } from './modular-elements/footer/footer.component';
 import { SectionBarComponent } from './modular-elements/section-bar/section-bar.component';
 import { TextFieldComponent } from './modular-elements/text-field/text-field.component';
@@ -32,6 +33,8 @@ import { StepTwoComponent } from './pages/form-steps/step-two/step-two.component
 import { StepThreeComponent } from './pages/form-steps/step-three/step-three.component';
 import { StepFourComponent } from './pages/form-steps/step-four/step-four.component';
 import { StepFiveComponent } from './pages/form-steps/step-five/step-five.component';
+import { RadioElementComponent } from './modular-elements/radio-element/radio-element.component';
+import { CheckboxElementComponent } from './modular-elements/checkbox-element/checkbox-element.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import { StepFiveComponent } from './pages/form-steps/step-five/step-five.compon
     ToggleButtonComponent,
     PlusButtonComponent,
     HeaderComponent,
+    HelpButtonComponent,
     FooterComponent,
     SectionBarComponent,
     TextFieldComponent,
@@ -57,7 +61,9 @@ import { StepFiveComponent } from './pages/form-steps/step-five/step-five.compon
     StepTwoComponent,
     StepThreeComponent,
     StepFourComponent,
-    StepFiveComponent
+    StepFiveComponent,
+    RadioElementComponent,
+    CheckboxElementComponent
   ],
   imports: [
     BrowserModule,

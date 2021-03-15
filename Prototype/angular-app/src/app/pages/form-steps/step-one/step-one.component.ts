@@ -15,7 +15,12 @@ export class StepOneComponent implements OnInit {
   ) {
     this.step = this._formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required]
+      lastName: ['', Validators.required],
+      taxNr: ['', Validators.required],
+      street: ['', Validators.required],
+      houseNr: ['', Validators.required],
+      plz: ['', Validators.required],
+      place: ['', Validators.required]
     });
     this.formService.stepReady(this.step, 'one')
   }

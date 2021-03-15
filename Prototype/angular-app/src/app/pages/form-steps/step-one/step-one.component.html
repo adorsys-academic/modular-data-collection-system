@@ -1,12 +1,99 @@
-<form [formGroup]="step">
-  <ng-template matStepLabel>Fill out your name</ng-template>
-  <mat-form-field>
-    <input matInput placeholder="First name" formControlName="firstName" required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Last name" formControlName="lastName" required>
-  </mat-form-field>
-  <div>
+<form class="form" #formOne="ngForm" [formGroup]="step">
+  <div class="form__line"></div>
+  <div class="form__header">
+    <div class="form__header__headline">
+      <h2>ALLGEMEINES</h2>
+    </div>
+    <div class="form__header__help">
+      <app-help-button
+        [helpButtonClass]="'help-button help-button--primary'"
+      ></app-help-button>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Persönliche Informationen'"
+    >
+    </app-fieldset-headline>
+    <div class="form__field__row">
+      <app-text-field
+        [textFieldLabel]="'Name'"
+        [textFieldClass]="'text-field text-field--small'"
+        [textFieldControl]="'firstName'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+      <app-text-field
+        [textFieldLabel]="'Nachname'"
+        [textFieldClass]="'text-field text-field--small'"
+        [textFieldControl]="'lastName'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+    </div>
+    <app-dropdown-field
+      [dropdownFieldLabel]="'Steuerklasse'"
+    ></app-dropdown-field>
+    <app-text-field
+      [textFieldLabel]="'Steuernummer'"
+      [textFieldClass]="'text-field text-field--large'"
+      [textFieldControl]="'taxNr'"
+      [textFieldReadonly]="false"
+    ></app-text-field>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Adresse'"
+    >
+    </app-fieldset-headline>
+    <div class="form__field__row">
+      <app-text-field
+        [textFieldLabel]="'Straße'"
+        [textFieldClass]="'text-field text-field--medium'"
+        [textFieldControl]="'street'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+      <app-text-field
+        [textFieldLabel]="'Hausnummer'"
+        [textFieldClass]="'text-field text-field--tiny'"
+        [textFieldControl]="'houseNr'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+    </div>
+    <div class="form__field__row">
+      <app-text-field
+        [textFieldLabel]="'PLZ'"
+        [textFieldClass]="'text-field text-field--tiny'"
+        [textFieldControl]="'plz'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+      <app-text-field
+        [textFieldLabel]="'Ort'"
+        [textFieldClass]="'text-field text-field--medium'"
+        [textFieldControl]="'place'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Informationen zum Beruf'"
+    >
+    </app-fieldset-headline>
+    <app-dropdown-field
+      [dropdownFieldLabel]="'Branchenkategorie'"
+    ></app-dropdown-field>
+    <app-dropdown-field
+      [dropdownFieldLabel]="'Branche'"
+    ></app-dropdown-field>
+    <app-seperator></app-seperator>
+    <app-dropdown-field
+      [dropdownFieldLabel]="'Berufsgruppe'"
+    ></app-dropdown-field>
+    <app-dropdown-field
+      [dropdownFieldLabel]="'Beschäftigt als'"
+    ></app-dropdown-field>
+  </div>
+  <div class="form__buttons">
     <button mat-button matStepperNext>Weiter ></button>
+    <!--<button mat-button matStepperNext type="submit" [disabled]="formTwo.form.invalid">Weiter ></button>-->
   </div>
 </form>

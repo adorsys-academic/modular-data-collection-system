@@ -8,6 +8,9 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TextFieldComponent implements OnInit {
 
   @Input() textFieldLabel:string;
+  @Input() textFieldClass:string;
+  @Input() textFieldControl:string;
+  @Input() textFieldReadonly:boolean;
 
   constructor() { }
 

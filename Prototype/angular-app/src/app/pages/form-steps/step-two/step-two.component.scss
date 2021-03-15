@@ -1,0 +1,58 @@
+@import "./../../../../assets/themes/variable";
+
+::ng-deep .mat-button.mat-button-disabled.mat-button-disabled {
+  background-color: $GRAY-LIGHT;
+  color: $WHITE;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__line {
+    background-color: $GRAY-LIGHT;
+    width: auto;
+    height: 6px;
+    border-radius: 6px;
+    margin: 1em 0 2em 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__headline {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 4em;
+      flex-grow: 1;
+    }
+
+    &__help {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+

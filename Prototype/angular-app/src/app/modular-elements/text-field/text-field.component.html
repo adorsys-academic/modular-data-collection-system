@@ -1,7 +1,17 @@
-<div class="text-field text-field--large">
-
-  <label class="text-field__label" for="txt-field"> {{textFieldLabel}} </label>
-  <input class="text-field__input" type="text" id="txt-field" name="txt-field">
-
+<div [ngClass]="textFieldClass">
+  <label
+    class="text-field__label"
+    for="txt-field"
+  >
+    {{textFieldLabel}}
+  </label>
+  <input
+    class="text-field__input"
+    type="text"
+    id="txt-field"
+    name="txt-field"
+    [formControlName]="textFieldControl"
+    required
+    [readonly]="textFieldReadonly">
 </div>
 

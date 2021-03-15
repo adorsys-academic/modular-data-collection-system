@@ -23,7 +23,15 @@ export class FormService {
   mainForm: FormGroup = this._formBuilder.group({
     firstName: '',
     lastName: '',
-    address: ''
+    taxNr: '',
+    street: '',
+    houseNr: '',
+    plz: '',
+    place: '',
+    workStreet: '',
+    workHouseNr: '',
+    workPlz: '',
+    workPlace: '',
   });
 
   constructor(
@@ -33,11 +41,19 @@ export class FormService {
       form.valueChanges.subscribe(val => {
         this.mainForm.value.firstName = val.firstName;
         this.mainForm.value.lastName = val.lastName;
+        this.mainForm.value.taxNr = val.taxNr;
+        this.mainForm.value.street = val.street;
+        this.mainForm.value.houseNr = val.houseNr;
+        this.mainForm.value.plz = val.plz;
+        this.mainForm.value.place = val.place;
       })
     );
     this.stepTwo.subscribe(form =>
       form.valueChanges.subscribe(val => {
-        this.mainForm.value.address = val.address;
+        this.mainForm.value.workStreet = val.workStreet;
+        this.mainForm.value.workHouseNr = val.workHouseNr;
+        this.mainForm.value.workPlz = val.workPlz;
+        this.mainForm.value.workPlace = val.workPlace;
       })
     );
     this.stepThree.subscribe(form =>

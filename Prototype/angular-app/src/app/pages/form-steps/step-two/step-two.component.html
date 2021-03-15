@@ -1,10 +1,102 @@
-<form [formGroup]="step">
-  <ng-template matStepLabel>Fill out your address</ng-template>
-  <mat-form-field>
-    <input matInput placeholder="Address" formControlName="address" required>
-  </mat-form-field>
-  <div>
+<form class="form" #formTwo="ngForm" [formGroup]="step">
+  <div class="form__line"></div>
+  <div class="form__header">
+    <div class="form__header__headline">
+      <h2>FAHRTKOSTEN</h2>
+    </div>
+    <div class="form__header__help">
+      <app-help-button
+        [helpButtonClass]="'help-button help-button--primary'"
+      ></app-help-button>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Adresse des Arbeitsplatzes'"
+    >
+    </app-fieldset-headline>
+    <div class="form__field__row">
+      <app-text-field
+        [textFieldLabel]="'Straße'"
+        [textFieldClass]="'text-field text-field--medium'"
+        [textFieldControl]="'workStreet'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+      <app-text-field
+        [textFieldLabel]="'Hausnummer'"
+        [textFieldClass]="'text-field text-field--tiny'"
+        [textFieldControl]="'workHouseNr'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+    </div>
+    <div class="form__field__row">
+      <app-text-field
+        [textFieldLabel]="'PLZ'"
+        [textFieldClass]="'text-field text-field--tiny'"
+        [textFieldControl]="'workPlz'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+      <app-text-field
+        [textFieldLabel]="'Ort'"
+        [textFieldClass]="'text-field text-field--medium'"
+        [textFieldControl]="'workPlace'"
+        [textFieldReadonly]="false"
+      ></app-text-field>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Adressen weiterer Arbeitsstätten'"
+    >
+    </app-fieldset-headline>
+    <app-plus-button
+      [plusButtonClass]="'plus-button__button plus-button__button--primary'"
+      [plusButtonLabel]="'Weitere Adresse hinzufügen'"
+    ></app-plus-button>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Strecke des Arbeitsweges'"
+    >
+    </app-fieldset-headline>
+    <app-text-field
+      [textFieldLabel]="'Strecke in KM'"
+      [textFieldClass]="'text-field text-field--large'"
+      [textFieldControl]=""
+      [textFieldReadonly]="true"
+    ></app-text-field>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Fortbewegungsmittel'"
+    >
+    </app-fieldset-headline>
+    <div class="form__field__row">
+      <app-radio-element
+        [radioElementId]="'car'"
+        [radioElementLabelAndValue]="'Auto'"
+        [radioElementImg]="'assets/icons/car.svg'"
+      ></app-radio-element>
+      <app-radio-element
+        [radioElementId]="'bus'"
+        [radioElementLabelAndValue]="'Bus'"
+        [radioElementImg]="'assets/icons/bus.svg'"
+      ></app-radio-element>
+      <app-radio-element
+        [radioElementId]="'bike'"
+        [radioElementLabelAndValue]="'Fahrrad'"
+        [radioElementImg]="'assets/icons/bike.svg'"
+      ></app-radio-element>
+      <app-radio-element
+        [radioElementId]="'feet'"
+        [radioElementLabelAndValue]="'Zu Fuß'"
+        [radioElementImg]="'assets/icons/feet.svg'"
+      ></app-radio-element>
+    </div>
+  </div>
+  <div class="form__buttons">
     <button mat-button matStepperPrevious>< Zurück</button>
     <button mat-button matStepperNext>Weiter ></button>
+    <!--<button mat-button matStepperNext type="submit" [disabled]="formTwo.form.invalid">Weiter ></button>-->
   </div>
 </form>
