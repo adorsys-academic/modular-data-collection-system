@@ -1,4 +1,4 @@
-<div [ngClass]="textFieldClass">
+<div [formGroup]="textFieldParentForm" [ngClass]="textFieldClass">
   <label
     class="text-field__label"
     for="txt-field"
@@ -9,7 +9,6 @@
     class="text-field__input"
     type="text"
     id="txt-field"
-    name="txt-field"
     [formControlName]="textFieldControl"
     required
     [readonly]="textFieldReadonly">

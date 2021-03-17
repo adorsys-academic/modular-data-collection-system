@@ -1,7 +1,51 @@
-<form [formGroup]="step">
-
-  <div>
+<form class="form" #formThree="ngForm" [formGroup]="step">
+  <div class="form__line"></div>
+  <div class="form__header">
+    <div class="form__header__headline">
+      <h2>HOME-OFFICE</h2>
+    </div>
+    <div class="form__header__help">
+      <app-help-button
+        [helpButtonClass]="'help-button help-button--primary'"
+      ></app-help-button>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-toggle-button
+      [toggleButtonLabel]="'Ist Home-Office bei Ihrem Job möglich?'"
+    ></app-toggle-button>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Haben Sie dafür Einrichtung gekauft?'"
+    >
+    </app-fieldset-headline>
+    <div class="form__field__row">
+      <app-checkbox-element
+        [checkboxElementId]="'computer'"
+        [checkboxElementLabelAndValue]="'Computer'"
+        [checkboxElementImg]="'assets/icons/computer.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'smartphone'"
+        [checkboxElementLabelAndValue]="'Smartphone'"
+        [checkboxElementImg]="'assets/icons/smartphone.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'pcMaterial'"
+        [checkboxElementLabelAndValue]="'PC-Zubehör'"
+        [checkboxElementImg]="'assets/icons/mouse.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'furniture'"
+        [checkboxElementLabelAndValue]="'Büromöbel'"
+        [checkboxElementImg]="'assets/icons/office_chair.svg'"
+      ></app-checkbox-element>
+    </div>
+  </div>
+  <div class="form__buttons">
     <button mat-button matStepperPrevious>< Zurück</button>
     <button mat-button matStepperNext>Weiter ></button>
+    <!--<button mat-button matStepperNext type="submit" [disabled]="formTwo.form.invalid">Weiter ></button>-->
   </div>
 </form>

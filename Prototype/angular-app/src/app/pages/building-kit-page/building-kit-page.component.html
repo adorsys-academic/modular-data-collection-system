@@ -15,15 +15,26 @@
       >
 
         <div class="example-box" cdkDrag>
-          <app-fieldset-headline [fieldsetHeadlineText]="'Headline'" cdkDrag></app-fieldset-headline>
+          <app-fieldset-headline
+            [fieldsetHeadlineText]="'Headline'"
+            cdkDrag
+          ></app-fieldset-headline>
         </div>
 
         <div class="example-box" cdkDrag>
-          <app-text-field [textFieldLabel]="'Label'" cdkDrag></app-text-field>
+          <app-text-field
+            [textFieldLabel]="'Label'"
+            [textFieldClass]="'text-field text-field--large'"
+            [textFieldControl]="'txt-field'"
+          ></app-text-field>
         </div>
 
         <div class="example-box" cdkDrag>
-          <app-dropdown-field [dropdownFieldLabel]="'Label'" cdkDrag></app-dropdown-field>
+          <app-dropdown-field
+            [dropdownFieldLabel]="'Label'"
+            [dropdownFieldControl]="'dd-field'"
+            [dropdownFieldValues]="['1', '2', '3']"
+          ></app-dropdown-field>
         </div>
 
 

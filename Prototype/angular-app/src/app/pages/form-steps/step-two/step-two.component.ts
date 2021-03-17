@@ -9,6 +9,8 @@ import {FormService} from "../../../form.service";
 })
 export class StepTwoComponent implements OnInit {
 
+  step: FormGroup;
+
   constructor(
     private _formBuilder: FormBuilder,
     private formService: FormService
@@ -17,14 +19,13 @@ export class StepTwoComponent implements OnInit {
       workStreet: ['', Validators.required],
       workHouseNr: ['', Validators.required],
       workPlz: ['', Validators.required],
-      workPlace: ['', Validators.required]
+      workPlace: ['', Validators.required],
+      distance: ['']
     });
     this.formService.stepReady(this.step, 'two')
   }
 
   ngOnInit(): void {
   }
-
-  step: FormGroup;
 
 }

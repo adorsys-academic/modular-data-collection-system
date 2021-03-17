@@ -1,13 +1,12 @@
-<div class="dropdown-field">
-
+<div class="dropdown-field" [formGroup]="dropdownFieldParentForm">
   <label class="dropdown-field__label" for="dd-field"> {{dropdownFieldLabel}} </label>
-
-  <select class="dropdown-field__select" id="dd-field" name="dd-field">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+  <select
+    [formControlName]="dropdownFieldControl"
+    class="dropdown-field__select"
+    id="dd-field"
+  >
+    <option [value]="value" *ngFor="let value of dropdownFieldValues">
+      {{value}}
+    </option>
   </select>
-
 </div>

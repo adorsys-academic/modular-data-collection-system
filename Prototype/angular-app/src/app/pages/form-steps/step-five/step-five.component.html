@@ -1,7 +1,29 @@
-<form [formGroup]="step">
-
-  <div>
+<form class="form" #formFive="ngForm" [formGroup]="step">
+  <div class="form__line"></div>
+  <div class="form__header">
+    <div class="form__header__headline">
+      <h2>ARBEITSKLEIDUNG</h2>
+    </div>
+    <div class="form__header__help">
+      <app-help-button
+        [helpButtonClass]="'help-button help-button--primary'"
+      ></app-help-button>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-toggle-button
+      [toggleButtonLabel]="'Benötigen Sie Arbeitskleidung?'"
+    ></app-toggle-button>
+  </div>
+  <app-seperator></app-seperator>
+  <div class="form__field">
+    <app-toggle-button
+      [toggleButtonLabel]="'Haben Sie neue Arbeitskleidung gekauft?'"
+    ></app-toggle-button>
+  </div>
+  <div class="form__buttons">
     <button mat-button matStepperPrevious>< Zurück</button>
-    <button mat-button matStepperNext>Weiter ></button>
+    <button mat-button matStepperNext>Zur Überprüfung ></button>
+    <!--<button mat-button matStepperNext type="submit" [disabled]="formTwo.form.invalid">Weiter ></button>-->
   </div>
 </form>

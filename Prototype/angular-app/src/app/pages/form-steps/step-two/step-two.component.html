@@ -21,12 +21,14 @@
         [textFieldClass]="'text-field text-field--medium'"
         [textFieldControl]="'workStreet'"
         [textFieldReadonly]="false"
+        [textFieldParentForm]="step"
       ></app-text-field>
       <app-text-field
         [textFieldLabel]="'Hausnummer'"
         [textFieldClass]="'text-field text-field--tiny'"
         [textFieldControl]="'workHouseNr'"
         [textFieldReadonly]="false"
+        [textFieldParentForm]="step"
       ></app-text-field>
     </div>
     <div class="form__field__row">
@@ -35,12 +37,14 @@
         [textFieldClass]="'text-field text-field--tiny'"
         [textFieldControl]="'workPlz'"
         [textFieldReadonly]="false"
+        [textFieldParentForm]="step"
       ></app-text-field>
       <app-text-field
         [textFieldLabel]="'Ort'"
         [textFieldClass]="'text-field text-field--medium'"
         [textFieldControl]="'workPlace'"
         [textFieldReadonly]="false"
+        [textFieldParentForm]="step"
       ></app-text-field>
     </div>
   </div>
@@ -62,8 +66,9 @@
     <app-text-field
       [textFieldLabel]="'Strecke in KM'"
       [textFieldClass]="'text-field text-field--large'"
-      [textFieldControl]=""
+      [textFieldControl]="'distance'"
       [textFieldReadonly]="true"
+      [textFieldParentForm]="step"
     ></app-text-field>
   </div>
   <div class="form__field">

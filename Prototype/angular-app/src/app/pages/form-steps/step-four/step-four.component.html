@@ -1,7 +1,63 @@
-<form [formGroup]="step">
-
-  <div>
+<form class="form" #formFour="ngForm" [formGroup]="step">
+  <div class="form__line"></div>
+  <div class="form__header">
+    <div class="form__header__headline">
+      <h2>ARBEITSMITTEL</h2>
+    </div>
+    <div class="form__header__help">
+      <app-help-button
+        [helpButtonClass]="'help-button help-button--primary'"
+      ></app-help-button>
+    </div>
+  </div>
+  <div class="form__field">
+    <app-toggle-button
+      [toggleButtonLabel]="'Benötigen Sie Arbeitsmittel?'"
+    ></app-toggle-button>
+  </div>
+  <div class="form__field">
+    <app-fieldset-headline
+      [fieldsetHeadlineText]="'Haben Sie neue Arbeitsmittel gekauft?'"
+    >
+    </app-fieldset-headline>
+    <div class="form__field__row">
+      <app-checkbox-element
+        [checkboxElementId]="'materials'"
+        [checkboxElementLabelAndValue]="'Materialien'"
+        [checkboxElementImg]="'assets/icons/materials.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'books'"
+        [checkboxElementLabelAndValue]="'Fachliteratur'"
+        [checkboxElementImg]="'assets/icons/book.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'tools'"
+        [checkboxElementLabelAndValue]="'Werkzeuge'"
+        [checkboxElementImg]="'assets/icons/tools.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'briefcase'"
+        [checkboxElementLabelAndValue]="'Aktentasche'"
+        [checkboxElementImg]="'assets/icons/briefcase.svg'"
+      ></app-checkbox-element>
+    </div>
+    <div class="form__field__row">
+      <app-checkbox-element
+        [checkboxElementId]="'software'"
+        [checkboxElementLabelAndValue]="'Software'"
+        [checkboxElementImg]="'assets/icons/software.svg'"
+      ></app-checkbox-element>
+      <app-checkbox-element
+        [checkboxElementId]="'additional'"
+        [checkboxElementLabelAndValue]="'Sonstiges'"
+        [checkboxElementImg]="'assets/icons/additional.svg'"
+      ></app-checkbox-element>
+    </div>
+  </div>
+  <div class="form__buttons">
     <button mat-button matStepperPrevious>< Zurück</button>
     <button mat-button matStepperNext>Weiter ></button>
+    <!--<button mat-button matStepperNext type="submit" [disabled]="formTwo.form.invalid">Weiter ></button>-->
   </div>
 </form>

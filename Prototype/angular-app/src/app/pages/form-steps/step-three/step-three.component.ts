@@ -9,6 +9,8 @@ import {FormService} from "../../../form.service";
 })
 export class StepThreeComponent implements OnInit {
 
+  step: FormGroup;
+
   constructor(
     private _formBuilder: FormBuilder,
     private formService: FormService
@@ -19,7 +21,5 @@ export class StepThreeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  step: FormGroup;
 
 }

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-dropdown-field',
@@ -8,10 +9,14 @@ import {Component, Input, OnInit} from '@angular/core';
 export class DropdownFieldComponent implements OnInit {
 
   @Input() dropdownFieldLabel:string;
+  @Input() dropdownFieldControl:string;
+  @Input() dropdownFieldValues:[string];
+  @Input() dropdownFieldParentForm:FormGroup;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    console.log(this.dropdownFieldControl);
   }
 
 }

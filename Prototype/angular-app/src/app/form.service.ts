@@ -24,14 +24,18 @@ export class FormService {
     firstName: '',
     lastName: '',
     taxNr: '',
+    taxClass: '',
     street: '',
     houseNr: '',
     plz: '',
     place: '',
+    branch: '',
+    employment: '',
     workStreet: '',
     workHouseNr: '',
     workPlz: '',
     workPlace: '',
+    distance: ''
   });
 
   constructor(
@@ -42,10 +46,13 @@ export class FormService {
         this.mainForm.value.firstName = val.firstName;
         this.mainForm.value.lastName = val.lastName;
         this.mainForm.value.taxNr = val.taxNr;
+        this.mainForm.value.taxClass = val.taxClass;
         this.mainForm.value.street = val.street;
         this.mainForm.value.houseNr = val.houseNr;
         this.mainForm.value.plz = val.plz;
         this.mainForm.value.place = val.place;
+        this.mainForm.value.branch = val.branch;
+        this.mainForm.value.employment = val.employment;
       })
     );
     this.stepTwo.subscribe(form =>
@@ -54,6 +61,7 @@ export class FormService {
         this.mainForm.value.workHouseNr = val.workHouseNr;
         this.mainForm.value.workPlz = val.workPlz;
         this.mainForm.value.workPlace = val.workPlace;
+        this.mainForm.value.distance = val.distance;
       })
     );
     this.stepThree.subscribe(form =>
