@@ -1,5 +1,50 @@
 <form [formGroup]="buildingKit" class="building-kit">
 
+  <div class="building-kit__editor">
+    <h2 class="building-kit__headline">Element Editor:</h2>
+    <form [formGroup]="editor">
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="hl1Txt">
+          Text für Headline 1
+        </label>
+        <input [(ngModel)]="headline1Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="hl1Txt"
+               formControlName="hl1Txt"
+        >
+      </div>
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="txF1Txt">
+          Label für Input 1
+        </label>
+        <input [(ngModel)]="textField1Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="txF1Txt"
+               formControlName="txF1Txt"
+        >
+      </div>
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="ddF1Txt">
+          Label für Input 1
+        </label>
+        <input [(ngModel)]="dropdownField1Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="ddF1Txt"
+               formControlName="ddF1Txt"
+        >
+      </div>
+    </form>
+  </div>
+
   <ng-container cdkDropListGroup>
 
     <div class="container building-kit__elements">
@@ -10,20 +55,20 @@
         #sidebarList="cdkDropList"
         [cdkDropListData]="sidebar"
         cdkDropListConnectedTo="[mainList]"
-        class="list building-kit__list"
+        class="list building-kit__elements__list"
         (cdkDropListDropped)="drop($event)"
       >
 
-        <div class="box building-kit__list__box" cdkDrag>
+        <div class="box building-kit__elements__list__box" cdkDrag>
           <app-fieldset-headline
-            [fieldsetHeadlineText]="'Headline'"
+            [fieldsetHeadlineText]="headline1Txt"
             cdkDrag
           ></app-fieldset-headline>
         </div>
 
-        <div class="box building-kit__list__box" cdkDrag>
+        <div class="box building-kit__elements__list__box" cdkDrag>
           <app-text-field
-            [textFieldLabel]="'Name'"
+            [textFieldLabel]="textField1Txt"
             [textFieldClass]="'text-field text-field--small'"
             [textFieldControl]="'txtField'"
             [textFieldReadonly]="false"
@@ -31,9 +76,9 @@
           ></app-text-field>
         </div>
 
-        <div class="box building-kit__list__box" cdkDrag>
+        <div class="box building-kit__elements__list__box" cdkDrag>
           <app-dropdown-field
-            [dropdownFieldLabel]="'Label'"
+            [dropdownFieldLabel]="dropdownField1Txt"
             [dropdownFieldControl]="'ddField'"
             [dropdownFieldValues]="['1', '2', '3', '4', '5', '6']"
             [dropdownFieldParentForm]="buildingKit"
@@ -54,7 +99,7 @@
         #mainList="cdkDropList"
         [cdkDropListData]="main"
         cdkDropListConnectedTo="[sidebarList]"
-        class="list building-kit__list"
+        class="list building-kit__form__list"
         (cdkDropListDropped)="drop($event)"
       >
 

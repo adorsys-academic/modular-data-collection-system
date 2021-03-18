@@ -10,8 +10,14 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class BuildingKitPageComponent implements OnInit {
 
   buildingKit: FormGroup;
+  editor: FormGroup;
   sidebar;
   main;
+
+  headline1Txt:string = 'Headline 1';
+  textField1Txt:string = 'Label Input 1';
+  dropdownField1Txt:string = 'Label Dropdown 1';
+  //btnCls:string = 'button button--primary';
 
   constructor(
     private _formBuilder: FormBuilder
@@ -19,6 +25,11 @@ export class BuildingKitPageComponent implements OnInit {
     this.buildingKit = this._formBuilder.group({
       txtField: [''],
       ddField: ['']
+    });
+    this.editor = this._formBuilder.group({
+      hl1Txt: [''],
+      txF1Txt: [''],
+      ddF1Txt: [''],
     });
   }
 
