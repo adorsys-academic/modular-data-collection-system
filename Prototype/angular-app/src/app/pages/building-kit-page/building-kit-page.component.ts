@@ -1,5 +1,6 @@
 import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag} from "@angular/cdk/drag-drop";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-building-kit-page',
@@ -8,13 +9,21 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag} from "@angular
 })
 export class BuildingKitPageComponent implements OnInit {
 
-  constructor() { }
+  buildingKit: FormGroup;
+  sidebar;
+  main;
+
+  constructor(
+    private _formBuilder: FormBuilder
+  ) {
+    this.buildingKit = this._formBuilder.group({
+      txtField: [''],
+      ddField: ['']
+    });
+  }
 
   ngOnInit() {
   }
-
-  sidebar;
-  main;
 
   @ViewChildren(CdkDrag) draggables: QueryList<CdkDrag>;
 

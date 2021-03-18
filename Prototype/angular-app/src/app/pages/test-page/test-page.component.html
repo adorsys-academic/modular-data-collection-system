@@ -4,9 +4,9 @@
 
 <app-fieldset-headline [fieldsetHeadlineText]="'Headline'"></app-fieldset-headline>
 
-<app-text-field
+<!--<app-text-field
   [textFieldLabel]="'Label'"
-  [textFieldClass]="'text-field text-field--large'"
+  [textFieldClass]="'text-field text-field&#45;&#45;large'"
   [textFieldControl]="'txt-field'"
 ></app-text-field>
 
@@ -16,7 +16,7 @@
   [dropdownFieldLabel]="'Label'"
   [dropdownFieldControl]="'dd-field'"
   [dropdownFieldValues]="['1', '2', '3']"
-></app-dropdown-field>
+></app-dropdown-field>-->
 
 <div style="background-color: #84A0BA">
 
@@ -48,108 +48,108 @@
 
 <div>
 
-  <app-default-button [buttonClass]="btnCls" [buttonText]="btnTxt"></app-default-button>
+  <!--  <app-default-button [buttonClass]="btnCls" [buttonText]="btnTxt"></app-default-button>
 
-  <input [(ngModel)]="btnTxt" type="text">
+    <input [(ngModel)]="btnTxt" type="text">
 
-  <input
-    [(ngModel)]="btnCls"
-    type="radio"
-    id="primary"
-    value="button button--primary"
-  >
-  <label for="primary">Primary</label>
-  <input
-    [(ngModel)]="btnCls"
-    type="radio"
-    id="secondary"
-    value="button button--secondary"
-  >
-  <label for="secondary">Secondary</label><br>
+    <input
+      [(ngModel)]="btnCls"
+      type="radio"
+      id="primary"
+      value="button button&#45;&#45;primary"
+    >
+    <label for="primary">Primary</label>
+    <input
+      [(ngModel)]="btnCls"
+      type="radio"
+      id="secondary"
+      value="button button&#45;&#45;secondary"
+    >
+    <label for="secondary">Secondary</label><br>-->
 
-</div>
+  <!--</div>
 
-<div>
-  <app-toggle-button [toggleButtonLabel]="'Label'"></app-toggle-button>
-</div>
+  <div>
+    <app-toggle-button [toggleButtonLabel]="'Label'"></app-toggle-button>
+  </div>
 
-<div>
-  <app-icon-button
-    [iconButtonClass]="'icon-button__button icon-button__button--primary'"
-    [iconButtonImg]="'assets/icons/car.svg'"
-    [iconButtonLabel]="'Label'"
-  ></app-icon-button>
-  <app-icon-button
-    [iconButtonClass]="'icon-button__button icon-button__button--primary'"
-    [iconButtonImg]="'assets/icons/bike.svg'"
-    [iconButtonLabel]="'Label'"
-  ></app-icon-button>
-</div>
+  <div>
+    <app-icon-button
+      [iconButtonClass]="'icon-button__button icon-button__button&#45;&#45;primary'"
+      [iconButtonImg]="'assets/icons/car.svg'"
+      [iconButtonLabel]="'Label'"
+    ></app-icon-button>
+    <app-icon-button
+      [iconButtonClass]="'icon-button__button icon-button__button&#45;&#45;primary'"
+      [iconButtonImg]="'assets/icons/bike.svg'"
+      [iconButtonLabel]="'Label'"
+    ></app-icon-button>
+  </div>
 
-<div>
-  <app-plus-button
-    [plusButtonClass]="'plus-button__button plus-button__button--primary'"
-    [plusButtonLabel]="'Label'"
-  ></app-plus-button>
-</div>
+  <div>
+    <app-plus-button
+      [plusButtonClass]="'plus-button__button plus-button__button&#45;&#45;primary'"
+      [plusButtonLabel]="'Label'"
+    ></app-plus-button>
+  </div>
 
-<div>
-  <app-arrow-button
-    [arrowButtonClass]="'arrow-button arrow-button--primary'"
-    [arrowButtonImg]="'assets/icons/arrow_right.svg'"
-  ></app-arrow-button>
-</div>
+  <div>
+    <app-arrow-button
+      [arrowButtonClass]="'arrow-button arrow-button&#45;&#45;primary'"
+      [arrowButtonImg]="'assets/icons/arrow_right.svg'"
+    ></app-arrow-button>
+  </div>
 
-<div>
-  <app-help-button
-    [helpButtonClass]="'help-button help-button--primary'"
-  ></app-help-button>
-</div>
+  <div>
+    <app-help-button
+      [helpButtonClass]="'help-button help-button&#45;&#45;primary'"
+    ></app-help-button>
+  </div>-->
 
-<!--<div style="display: flex; flex-direction: row">
-  <app-radio-element
-    [radioElementId]="'car'"
-    [radioElementLabelAndValue]="'Auto'"
-    [radioElementImg]="'assets/icons/car.svg'"
-  ></app-radio-element>
-  <app-radio-element
-    [radioElementId]="'bus'"
-    [radioElementLabelAndValue]="'Bus'"
-    [radioElementImg]="'assets/icons/bus.svg'"
-  ></app-radio-element>
-  <app-radio-element
-    [radioElementId]="'bike'"
-    [radioElementLabelAndValue]="'Fahrrad'"
-    [radioElementImg]="'assets/icons/bike.svg'"
-  ></app-radio-element>
-  <app-radio-element
-    [radioElementId]="'feet'"
-    [radioElementLabelAndValue]="'Zu Fuß'"
-    [radioElementImg]="'assets/icons/feet.svg'"
-  ></app-radio-element>
-</div>-->
+  <!--<div style="display: flex; flex-direction: row">
+    <app-radio-element
+      [radioElementId]="'car'"
+      [radioElementLabelAndValue]="'Auto'"
+      [radioElementImg]="'assets/icons/car.svg'"
+    ></app-radio-element>
+    <app-radio-element
+      [radioElementId]="'bus'"
+      [radioElementLabelAndValue]="'Bus'"
+      [radioElementImg]="'assets/icons/bus.svg'"
+    ></app-radio-element>
+    <app-radio-element
+      [radioElementId]="'bike'"
+      [radioElementLabelAndValue]="'Fahrrad'"
+      [radioElementImg]="'assets/icons/bike.svg'"
+    ></app-radio-element>
+    <app-radio-element
+      [radioElementId]="'feet'"
+      [radioElementLabelAndValue]="'Zu Fuß'"
+      [radioElementImg]="'assets/icons/feet.svg'"
+    ></app-radio-element>
+  </div>-->
 
-<div style="display: flex; flex-direction: row">
-  <app-checkbox-element
-    [checkboxElementId]="'car'"
-    [checkboxElementLabelAndValue]="'Auto'"
-    [checkboxElementImg]="'assets/icons/car.svg'"
-  ></app-checkbox-element>
-  <app-checkbox-element
-    [checkboxElementId]="'bus'"
-    [checkboxElementLabelAndValue]="'Bus'"
-    [checkboxElementImg]="'assets/icons/bus.svg'"
-  ></app-checkbox-element>
-  <app-checkbox-element
-    [checkboxElementId]="'bike'"
-    [checkboxElementLabelAndValue]="'Fahrrad'"
-    [checkboxElementImg]="'assets/icons/bike.svg'"
-  ></app-checkbox-element>
-  <app-checkbox-element
-    [checkboxElementId]="'feet'"
-    [checkboxElementLabelAndValue]="'Zu Fuß'"
-    [checkboxElementImg]="'assets/icons/feet.svg'"
-  ></app-checkbox-element>
-</div>
+  <!--<div style="display: flex; flex-direction: row">
+    <app-checkbox-element
+      [checkboxElementId]="'car'"
+      [checkboxElementLabelAndValue]="'Auto'"
+      [checkboxElementImg]="'assets/icons/car.svg'"
+    ></app-checkbox-element>
+    <app-checkbox-element
+      [checkboxElementId]="'bus'"
+      [checkboxElementLabelAndValue]="'Bus'"
+      [checkboxElementImg]="'assets/icons/bus.svg'"
+    ></app-checkbox-element>
+    <app-checkbox-element
+      [checkboxElementId]="'bike'"
+      [checkboxElementLabelAndValue]="'Fahrrad'"
+      [checkboxElementImg]="'assets/icons/bike.svg'"
+    ></app-checkbox-element>
+    <app-checkbox-element
+      [checkboxElementId]="'feet'"
+      [checkboxElementLabelAndValue]="'Zu Fuß'"
+      [checkboxElementImg]="'assets/icons/feet.svg'"
+    ></app-checkbox-element>
+  </div>-->
 
-<app-footer></app-footer>
+  <app-footer></app-footer>

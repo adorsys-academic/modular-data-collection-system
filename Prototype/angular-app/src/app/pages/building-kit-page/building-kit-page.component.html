@@ -1,39 +1,42 @@
-<div class="building-kit">
+<form [formGroup]="buildingKit" class="building-kit">
 
   <ng-container cdkDropListGroup>
 
-    <div class="example-container building-kit__elements">
-      <h2>Formular Elemente: (Sidebar)</h2>
+    <div class="container building-kit__elements">
+      <h2 class="building-kit__headline">Elemente:</h2>
 
       <div
         cdkDropList
         #sidebarList="cdkDropList"
         [cdkDropListData]="sidebar"
         cdkDropListConnectedTo="[mainList]"
-        class="example-list"
+        class="list building-kit__list"
         (cdkDropListDropped)="drop($event)"
       >
 
-        <div class="example-box" cdkDrag>
+        <div class="box building-kit__list__box" cdkDrag>
           <app-fieldset-headline
             [fieldsetHeadlineText]="'Headline'"
             cdkDrag
           ></app-fieldset-headline>
         </div>
 
-        <div class="example-box" cdkDrag>
+        <div class="box building-kit__list__box" cdkDrag>
           <app-text-field
-            [textFieldLabel]="'Label'"
-            [textFieldClass]="'text-field text-field--large'"
-            [textFieldControl]="'txt-field'"
+            [textFieldLabel]="'Name'"
+            [textFieldClass]="'text-field text-field--small'"
+            [textFieldControl]="'txtField'"
+            [textFieldReadonly]="false"
+            [textFieldParentForm]="buildingKit"
           ></app-text-field>
         </div>
 
-        <div class="example-box" cdkDrag>
+        <div class="box building-kit__list__box" cdkDrag>
           <app-dropdown-field
             [dropdownFieldLabel]="'Label'"
-            [dropdownFieldControl]="'dd-field'"
-            [dropdownFieldValues]="['1', '2', '3']"
+            [dropdownFieldControl]="'ddField'"
+            [dropdownFieldValues]="['1', '2', '3', '4', '5', '6']"
+            [dropdownFieldParentForm]="buildingKit"
           ></app-dropdown-field>
         </div>
 
@@ -43,15 +46,15 @@
     </div>
 
 
-    <div class="example-container building-kit__form">
-      <h2>Formular: (Main)</h2>
+    <div class="container building-kit__form">
+      <h2 class="building-kit__headline">Formular:</h2>
 
       <div
         cdkDropList
         #mainList="cdkDropList"
         [cdkDropListData]="main"
         cdkDropListConnectedTo="[sidebarList]"
-        class="example-list"
+        class="list building-kit__list"
         (cdkDropListDropped)="drop($event)"
       >
 
@@ -61,4 +64,4 @@
 
   </ng-container>
 
-</div>
+</form>
