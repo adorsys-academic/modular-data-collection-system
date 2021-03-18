@@ -1,7 +1,16 @@
 <form [formGroup]="buildingKit" class="building-kit">
 
   <div class="building-kit__editor">
-    <h2 class="building-kit__headline">Element Editor:</h2>
+    <div class="building-kit__header">
+      <div class="building-kit__header__headline">
+        <h2>Element Editor:</h2>
+      </div>
+      <div class="building-kit__header__help">
+        <app-help-button
+          [helpButtonClass]="'help-button help-button--editor'"
+        ></app-help-button>
+      </div>
+    </div>
     <form [formGroup]="editor">
       <div class="building-kit__editor__field">
         <label
@@ -28,18 +37,64 @@
                id="txF1Txt"
                formControlName="txF1Txt"
         >
+
+        <div class="building-kit__editor__field__radio">
+          <input
+            [(ngModel)]="textField1Cls"
+            type="radio"
+            id="tiny"
+            name="txF1Rd"
+            formControlName="txF1Rd"
+            value="text-field text-field--tiny"
+          >
+          <label for="tiny">Klein</label>
+
+          <input
+            [(ngModel)]="textField1Cls"
+            type="radio"
+            id="small"
+            name="txF1Rd"
+            formControlName="txF1Rd"
+            value="text-field text-field--small"
+          >
+          <label for="small">Mittel</label>
+
+          <input
+            [(ngModel)]="textField1Cls"
+            type="radio"
+            id="medium"
+            name="txF1Rd"
+            formControlName="txF1Rd"
+            value="text-field text-field--medium"
+          >
+          <label for="medium">Groß</label>
+        </div>
+
       </div>
+
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
           for="ddF1Txt">
-          Label für Input 1
+          Label für Dropdown 1
         </label>
         <input [(ngModel)]="dropdownField1Txt"
                class="building-kit__editor__field__input"
                type="text"
                id="ddF1Txt"
                formControlName="ddF1Txt"
+        >
+
+        <label
+          class="building-kit__editor__field__label"
+          for="ddF1Vls">
+          Werte für Dropdown 1
+        </label>
+        <input (change)="dropdownValuesChanged()"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="ddF1Vls"
+               formControlName="ddF1Vls"
         >
       </div>
     </form>
@@ -48,7 +103,16 @@
   <ng-container cdkDropListGroup>
 
     <div class="container building-kit__elements">
-      <h2 class="building-kit__headline">Elemente:</h2>
+      <div class="building-kit__header">
+        <div class="building-kit__header__headline">
+          <h2>Elemente:</h2>
+        </div>
+        <div class="building-kit__header__help">
+          <app-help-button
+            [helpButtonClass]="'help-button help-button--editor'"
+          ></app-help-button>
+        </div>
+      </div>
 
       <div
         cdkDropList
@@ -69,7 +133,7 @@
         <div class="box building-kit__elements__list__box" cdkDrag>
           <app-text-field
             [textFieldLabel]="textField1Txt"
-            [textFieldClass]="'text-field text-field--small'"
+            [textFieldClass]="textField1Cls"
             [textFieldControl]="'txtField'"
             [textFieldReadonly]="false"
             [textFieldParentForm]="buildingKit"
@@ -80,7 +144,7 @@
           <app-dropdown-field
             [dropdownFieldLabel]="dropdownField1Txt"
             [dropdownFieldControl]="'ddField'"
-            [dropdownFieldValues]="['1', '2', '3', '4', '5', '6']"
+            [dropdownFieldValues]="dropdownField1Vls"
             [dropdownFieldParentForm]="buildingKit"
           ></app-dropdown-field>
         </div>
@@ -92,7 +156,16 @@
 
 
     <div class="container building-kit__form">
-      <h2 class="building-kit__headline">Formular:</h2>
+      <div class="building-kit__header">
+        <div class="building-kit__header__headline">
+          <h2>Formular:</h2>
+        </div>
+        <div class="building-kit__header__help">
+          <app-help-button
+            [helpButtonClass]="'help-button help-button--editor'"
+          ></app-help-button>
+        </div>
+      </div>
 
       <div
         cdkDropList

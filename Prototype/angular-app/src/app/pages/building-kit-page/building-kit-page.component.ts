@@ -16,8 +16,9 @@ export class BuildingKitPageComponent implements OnInit {
 
   headline1Txt:string = 'Headline 1';
   textField1Txt:string = 'Label Input 1';
+  textField1Cls:string = 'text-field text-field--small';
   dropdownField1Txt:string = 'Label Dropdown 1';
-  //btnCls:string = 'button button--primary';
+  dropdownField1Vls:string[];
 
   constructor(
     private _formBuilder: FormBuilder
@@ -29,11 +30,23 @@ export class BuildingKitPageComponent implements OnInit {
     this.editor = this._formBuilder.group({
       hl1Txt: [''],
       txF1Txt: [''],
+      txF1Rd: [''],
       ddF1Txt: [''],
+      ddF1Vls: [''],
     });
   }
 
   ngOnInit() {
+    console.log(this.dropdownField1Vls);
+  }
+
+  dropdownValuesChanged() {
+    console.log("ValueControl", this.dropdownValueControl);
+    let values = this.dropdownValueControl.value;
+    values = values.split(",");
+    values.forEach((value) => value.trim());
+    console.log("values", values);
+    this.dropdownField1Vls = values.slice();
   }
 
   @ViewChildren(CdkDrag) draggables: QueryList<CdkDrag>;
@@ -78,6 +91,10 @@ export class BuildingKitPageComponent implements OnInit {
         container.addItem(event.item);
       });
     }
+  }
+
+  get dropdownValueControl() {
+    return this.editor.get("ddF1Vls");
   }
 }
 
