@@ -1,3 +1,9 @@
-<button mat-icon-button [ngClass]="helpButtonClass">
+<button
+  mat-icon-button #tooltip="matTooltip"
+  [ngClass]="helpButtonClass"
+  [matTooltip]="helpButtonTooltip"
+  matTooltipClass="help-button-tooltip"
+  matTooltipPosition="below"
+>
   <img class="help-button__icon" src="assets/icons/help.svg">
 </button>

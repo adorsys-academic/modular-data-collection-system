@@ -8,10 +8,13 @@
       <div class="building-kit__header__help">
         <app-help-button
           [helpButtonClass]="'help-button help-button--editor'"
+          [helpButtonTooltip]="'Im Editor können Sie die Texte und weitere Merkmale' +
+          ' ihrer Formular-Elemente anpassen.'"
         ></app-help-button>
       </div>
     </div>
     <form [formGroup]="editor">
+
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
@@ -25,6 +28,7 @@
                formControlName="hl1Txt"
         >
       </div>
+
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
@@ -37,7 +41,6 @@
                id="txF1Txt"
                formControlName="txF1Txt"
         >
-
         <div class="building-kit__editor__field__radio">
           <input
             [(ngModel)]="textField1Cls"
@@ -48,7 +51,6 @@
             value="text-field text-field--tiny"
           >
           <label for="tiny">Klein</label>
-
           <input
             [(ngModel)]="textField1Cls"
             type="radio"
@@ -58,7 +60,6 @@
             value="text-field text-field--small"
           >
           <label for="small">Mittel</label>
-
           <input
             [(ngModel)]="textField1Cls"
             type="radio"
@@ -69,7 +70,6 @@
           >
           <label for="medium">Groß</label>
         </div>
-
       </div>
 
       <div class="building-kit__editor__field">
@@ -84,17 +84,67 @@
                id="ddF1Txt"
                formControlName="ddF1Txt"
         >
-
         <label
           class="building-kit__editor__field__label"
           for="ddF1Vls">
           Werte für Dropdown 1
         </label>
         <input (change)="dropdownValuesChanged()"
+               [(ngModel)]="dropdownField1Vls"
                class="building-kit__editor__field__input"
                type="text"
                id="ddF1Vls"
                formControlName="ddF1Vls"
+        >
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="tb1Txt">
+          Text für Toggle-Button 1
+        </label>
+        <input [(ngModel)]="toggleButton1Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="tb1Txt"
+               formControlName="tb1Txt"
+        >
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="cb1Txt">
+          Text für Checkbox 1
+        </label>
+        <input [(ngModel)]="checkbox1Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="cb1Txt"
+               formControlName="cb1Txt"
+        >
+        <label
+          class="building-kit__editor__field__label"
+          for="cb2Txt">
+          Text für Checkbox 2
+        </label>
+        <input [(ngModel)]="checkbox2Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="cb2Txt"
+               formControlName="cb2Txt"
+        >
+        <label
+          class="building-kit__editor__field__label"
+          for="cb3Txt">
+          Text für Checkbox 3
+        </label>
+        <input [(ngModel)]="checkbox3Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="cb3Txt"
+               formControlName="cb3Txt"
         >
       </div>
     </form>
@@ -110,6 +160,8 @@
         <div class="building-kit__header__help">
           <app-help-button
             [helpButtonClass]="'help-button help-button--editor'"
+            [helpButtonTooltip]="'Hier befinden sich die verschiedenen Elemente die sie' +
+            ' verwenden können. Ziehen Sie diese einfach zum Feld `Formular:` um sie diesem hinzuzufügen.'"
           ></app-help-button>
         </div>
       </div>
@@ -149,6 +201,33 @@
           ></app-dropdown-field>
         </div>
 
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-toggle-button
+            [toggleButtonLabel]="toggleButton1Txt"
+          ></app-toggle-button>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-checkbox-element
+            [checkboxElementId]="'cb1'"
+            [checkboxElementLabelAndValue]="checkbox1Txt"
+            [checkboxElementImg]="'assets/icons/computer.svg'"
+          ></app-checkbox-element>
+          <app-checkbox-element
+            [checkboxElementId]="'cb2'"
+            [checkboxElementLabelAndValue]="checkbox2Txt"
+            [checkboxElementImg]="'assets/icons/mouse.svg'"
+          ></app-checkbox-element>
+          <app-checkbox-element
+            [checkboxElementId]="'cb3'"
+            [checkboxElementLabelAndValue]="checkbox3Txt"
+            [checkboxElementImg]="'assets/icons/office_chair.svg'"
+          ></app-checkbox-element>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-seperator></app-seperator>
+        </div>
 
       </div>
 
@@ -163,6 +242,7 @@
         <div class="building-kit__header__help">
           <app-help-button
             [helpButtonClass]="'help-button help-button--editor'"
+            [helpButtonTooltip]="'Hier sehen Sie die Vorschau, wie das fertige Formular aussehen wird.'"
           ></app-help-button>
         </div>
       </div>

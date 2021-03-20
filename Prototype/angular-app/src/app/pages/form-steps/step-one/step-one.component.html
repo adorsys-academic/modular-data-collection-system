@@ -7,6 +7,7 @@
     <div class="form__header__help">
       <app-help-button
         [helpButtonClass]="'help-button help-button--primary'"
+        [helpButtonTooltip]="'Geben Sie hier die Daten zu ihrer Person und ihrem Beruf an.'"
       ></app-help-button>
     </div>
   </div>
@@ -34,8 +35,9 @@
     <app-dropdown-field
       [dropdownFieldLabel]="'Steuerklasse'"
       [dropdownFieldControl]="'taxClass'"
-      [dropdownFieldValues]="['Klasse 1', 'Klasse 2', 'Klasse 3',
-      'Klasse 4', 'Klasse 5', 'Klasse 6']"
+      [dropdownFieldValues]="['Klasse 1 (ledig)', 'Klasse 2 (alleinerziehend)',
+      'Klasse 3 (Verheiratet: höheres Einkommen)', 'Klasse 4 (Verheiratet: gleiches Einkommen)',
+      'Klasse 5 (Verheiratet: geringeres Einkommen)', 'Klasse 6 (Zweit- und Nebenjob)']"
       [dropdownFieldParentForm]="step"
     ></app-dropdown-field>
     <app-text-field

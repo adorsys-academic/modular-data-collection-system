@@ -18,7 +18,11 @@ export class BuildingKitPageComponent implements OnInit {
   textField1Txt:string = 'Label Input 1';
   textField1Cls:string = 'text-field text-field--small';
   dropdownField1Txt:string = 'Label Dropdown 1';
-  dropdownField1Vls:string[];
+  dropdownField1Vls:string[] = ['1', '2', '3', '4', '5'];
+  toggleButton1Txt:string = 'Label Toggle-Button 1';
+  checkbox1Txt:string = 'Label Checkbox 1';
+  checkbox2Txt:string = 'Label Checkbox 2';
+  checkbox3Txt:string = 'Label Checkbox 3';
 
   constructor(
     private _formBuilder: FormBuilder
@@ -33,6 +37,10 @@ export class BuildingKitPageComponent implements OnInit {
       txF1Rd: [''],
       ddF1Txt: [''],
       ddF1Vls: [''],
+      tb1Txt: [''],
+      cb1Txt: [''],
+      cb2Txt: [''],
+      cb3Txt: [''],
     });
   }
 
@@ -53,7 +61,7 @@ export class BuildingKitPageComponent implements OnInit {
 
   ngAfterViewInit() {
     const arr = this.draggables.toArray();
-    this.sidebar = [arr[0], arr[1], arr[2]];
+    this.sidebar = [arr[0], arr[1], arr[2], arr[3]];
     this.main = [];
   }
 
