@@ -15,9 +15,12 @@ inside the folder where the dockerfile exists)
 ### Quick Step for OSCP Deployment
 We included a basic Helm Setup w/o creating a Route - (Object for future work).
 
-Build the Image with ``docker build -t <imagename> <path/to/dockerfile ``
+Build the Image with ``docker build -t <imagename> <path/to/dockerfile> ``
 Push the Image to the Registry (after login in) ```docker push <imagename>```
 Then Scale to Deployment down and afterwards up.
 
 ## Future Use of this Fork 
 Use of Gitlab Actions for learning purposes
+
+##Disclaimer
+Helm was just used for a quick initial Setup w/o CI/CD and may not be used in the future.
