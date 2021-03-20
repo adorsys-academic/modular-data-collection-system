@@ -6,9 +6,9 @@ RUN npm install \
 
 
 FROM nginx:latest
+COPY container/ /
 COPY --from=Builder /usr/src/app/dist  /usr/share/nginx/
-COPY Prototype/nginx/default.conf /etc/nginx/conf.d/
-COPY Prototype/nginx/nginx.conf /etc/nginx/
+RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx
 
 EXPOSE 8080
 CMD [ "nginx", "-g", "daemon off;" ]
