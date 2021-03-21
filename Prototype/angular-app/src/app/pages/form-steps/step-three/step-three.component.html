@@ -15,9 +15,10 @@
   <div class="form__field">
     <app-toggle-button
       [toggleButtonLabel]="'Ist Home-Office bei Ihrem Job möglich?'"
+      (change)="toggle()"
     ></app-toggle-button>
   </div>
-  <div class="form__field">
+  <div *ngIf="showMoreOptions" class="form__field">
     <app-fieldset-headline
       [fieldsetHeadlineText]="'Haben Sie dafür Einrichtung gekauft?'"
     >

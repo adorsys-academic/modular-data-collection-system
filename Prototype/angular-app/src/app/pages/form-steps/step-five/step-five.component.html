@@ -15,13 +15,22 @@
   <div class="form__field">
     <app-toggle-button
       [toggleButtonLabel]="'Benötigen Sie Arbeitskleidung?'"
+      (change)="toggle()"
     ></app-toggle-button>
   </div>
-  <app-seperator></app-seperator>
-  <div class="form__field">
-    <app-toggle-button
-      [toggleButtonLabel]="'Haben Sie neue Arbeitskleidung gekauft?'"
-    ></app-toggle-button>
+  <div *ngIf="showMoreOptions">
+    <app-seperator></app-seperator>
+    <div class="form__field">
+      <app-toggle-button
+        [toggleButtonLabel]="'Haben Sie neue Arbeitskleidung gekauft?'"
+        (click)="showPurchasedClothing=true"
+      ></app-toggle-button>
+    </div>
+  </div>
+  <div *ngIf="showPurchasedClothing" class="form__field">
+    <p class="form__field__text">3er Pack weiße T-Shirts</p>
+    <p class="form__field__text">50er Pack FFP2 Mund-Nasen-Masken</p>
+    <p class="form__field__text">69,99€</p>
   </div>
   <div class="form__buttons">
     <button mat-button matStepperPrevious>< Zurück</button>

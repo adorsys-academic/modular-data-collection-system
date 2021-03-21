@@ -15,8 +15,16 @@ export class BuildingKitPageComponent implements OnInit {
   main;
 
   headline1Txt:string = 'Headline 1';
+  headline2Txt:string = 'Headline 2';
+  headline3Txt:string = 'Headline 3';
   textField1Txt:string = 'Label Input 1';
   textField1Cls:string = 'text-field text-field--small';
+  textField2Txt:string = 'Label Input 2';
+  textField2Cls:string = 'text-field text-field--small';
+  textField3Txt:string = 'Label Input 3';
+  textField3Cls:string = 'text-field text-field--small';
+  textField4Txt:string = 'Label Input 4';
+  textField4Cls:string = 'text-field text-field--small';
   dropdownField1Txt:string = 'Label Dropdown 1';
   dropdownField1Vls:string[] = ['1', '2', '3', '4', '5'];
   toggleButton1Txt:string = 'Label Toggle-Button 1';
@@ -28,13 +36,24 @@ export class BuildingKitPageComponent implements OnInit {
     private _formBuilder: FormBuilder
   ) {
     this.buildingKit = this._formBuilder.group({
-      txtField: [''],
+      txtField1: [''],
+      txtField2: [''],
+      txtField3: [''],
+      txtField4: [''],
       ddField: ['']
     });
     this.editor = this._formBuilder.group({
       hl1Txt: [''],
+      hl2Txt: [''],
+      hl3Txt: [''],
       txF1Txt: [''],
-      txF1Rd: [''],
+      txF1Cls: [''],
+      txF2Txt: [''],
+      txF2Cls: [''],
+      txF3Txt: [''],
+      txF3Cls: [''],
+      txF4Txt: [''],
+      txF4Cls: [''],
       ddF1Txt: [''],
       ddF1Vls: [''],
       tb1Txt: [''],

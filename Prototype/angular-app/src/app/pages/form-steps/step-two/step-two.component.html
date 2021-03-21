@@ -23,6 +23,7 @@
         [textFieldControl]="'workStreet'"
         [textFieldReadonly]="false"
         [textFieldParentForm]="step"
+        (change)="streetCorrect=true"
       ></app-text-field>
       <app-text-field
         [textFieldLabel]="'Hausnummer'"
@@ -30,6 +31,7 @@
         [textFieldControl]="'workHouseNr'"
         [textFieldReadonly]="false"
         [textFieldParentForm]="step"
+        (change)="houseNrCorrect=true"
       ></app-text-field>
     </div>
     <div class="form__field__row">
@@ -39,6 +41,7 @@
         [textFieldControl]="'workPlz'"
         [textFieldReadonly]="false"
         [textFieldParentForm]="step"
+        (change)="plzCorrect=true"
       ></app-text-field>
       <app-text-field
         [textFieldLabel]="'Ort'"
@@ -46,6 +49,7 @@
         [textFieldControl]="'workPlace'"
         [textFieldReadonly]="false"
         [textFieldParentForm]="step"
+        (change)="placeCorrect=true"
       ></app-text-field>
     </div>
   </div>
@@ -59,7 +63,7 @@
       [plusButtonLabel]="'Weitere Adresse hinzufügen'"
     ></app-plus-button>
   </div>
-  <div class="form__field">
+  <div *ngIf="streetCorrect && houseNrCorrect && plzCorrect && placeCorrect" class="form__field">
     <app-fieldset-headline
       [fieldsetHeadlineText]="'Strecke des Arbeitsweges'"
     >
@@ -87,6 +91,7 @@
         [radioElementId]="'bus'"
         [radioElementLabelAndValue]="'Bus'"
         [radioElementImg]="'assets/icons/bus.svg'"
+        (click)="showPurchasedTicket=true"
       ></app-radio-element>
       <app-radio-element
         [radioElementId]="'bike'"
@@ -99,6 +104,10 @@
         [radioElementImg]="'assets/icons/feet.svg'"
       ></app-radio-element>
     </div>
+  </div>
+  <div *ngIf="showPurchasedTicket" class="form__field">
+    <p class="form__field__text">VAG Jahreskarte</p>
+    <p class="form__field__text">106,99€</p>
   </div>
   <div class="form__buttons">
     <button mat-button matStepperPrevious>< Zurück</button>

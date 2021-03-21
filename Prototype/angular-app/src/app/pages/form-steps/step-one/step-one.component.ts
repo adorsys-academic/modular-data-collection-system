@@ -18,11 +18,11 @@ export class StepOneComponent implements OnInit {
     this.step = this._formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      taxNr: ['', Validators.required],
+      taxNr: ['', Validators.required, Validators.minLength(11)],
       taxClass: ['', Validators.required],
       street: ['', Validators.required],
       houseNr: ['', Validators.required],
-      plz: ['', Validators.required],
+      plz: ['', Validators.required, Validators.minLength(5), Validators.maxLength(5)],
       place: ['', Validators.required],
       branch: ['', Validators.required],
       employment: ['', Validators.required]

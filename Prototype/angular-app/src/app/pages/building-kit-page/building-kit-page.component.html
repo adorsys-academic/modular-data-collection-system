@@ -32,6 +32,34 @@
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
+          for="hl2Txt">
+          Text für Headline 2
+        </label>
+        <input [(ngModel)]="headline2Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="hl2Txt"
+               formControlName="hl2Txt"
+        >
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="hl3Txt">
+          Text für Headline 3
+        </label>
+        <input [(ngModel)]="headline3Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="hl3Txt"
+               formControlName="hl3Txt"
+        >
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
           for="txF1Txt">
           Label für Input 1
         </label>
@@ -45,30 +73,159 @@
           <input
             [(ngModel)]="textField1Cls"
             type="radio"
-            id="tiny"
-            name="txF1Rd"
-            formControlName="txF1Rd"
+            id="tiny1"
+            name="txF1Cls"
+            formControlName="txF1Cls"
             value="text-field text-field--tiny"
           >
-          <label for="tiny">Klein</label>
+          <label for="tiny1">Klein</label>
           <input
             [(ngModel)]="textField1Cls"
             type="radio"
-            id="small"
-            name="txF1Rd"
-            formControlName="txF1Rd"
+            id="small1"
+            name="txF1Cls"
+            formControlName="txF1Cls"
             value="text-field text-field--small"
           >
-          <label for="small">Mittel</label>
+          <label for="small1">Mittel</label>
           <input
             [(ngModel)]="textField1Cls"
             type="radio"
-            id="medium"
-            name="txF1Rd"
-            formControlName="txF1Rd"
+            id="medium1"
+            name="txF1Cls"
+            formControlName="txF1Cls"
             value="text-field text-field--medium"
           >
-          <label for="medium">Groß</label>
+          <label for="medium1">Groß</label>
+        </div>
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="txF2Txt">
+          Label für Input 2
+        </label>
+        <input [(ngModel)]="textField2Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="txF2Txt"
+               formControlName="txF2Txt"
+        >
+        <div class="building-kit__editor__field__radio">
+          <input
+            [(ngModel)]="textField2Cls"
+            type="radio"
+            id="tiny2"
+            name="txF2Cls"
+            formControlName="txF2Cls"
+            value="text-field text-field--tiny"
+          >
+          <label for="tiny2">Klein</label>
+          <input
+            [(ngModel)]="textField2Cls"
+            type="radio"
+            id="small2"
+            name="txF2Cls"
+            formControlName="txF2Cls"
+            value="text-field text-field--small"
+          >
+          <label for="small2">Mittel</label>
+          <input
+            [(ngModel)]="textField2Cls"
+            type="radio"
+            id="medium2"
+            name="txF2Cls"
+            formControlName="txF2Cls"
+            value="text-field text-field--medium"
+          >
+          <label for="medium2">Groß</label>
+        </div>
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="txF3Txt">
+          Label für Input 3
+        </label>
+        <input [(ngModel)]="textField3Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="txF3Txt"
+               formControlName="txF3Txt"
+        >
+        <div class="building-kit__editor__field__radio">
+          <input
+            [(ngModel)]="textField3Cls"
+            type="radio"
+            id="tiny3"
+            name="txF3Cls"
+            formControlName="txF3Cls"
+            value="text-field text-field--tiny"
+          >
+          <label for="tiny3">Klein</label>
+          <input
+            [(ngModel)]="textField3Cls"
+            type="radio"
+            id="small3"
+            name="txF3Cls"
+            formControlName="txF3Cls"
+            value="text-field text-field--small"
+          >
+          <label for="small3">Mittel</label>
+          <input
+            [(ngModel)]="textField3Cls"
+            type="radio"
+            id="medium3"
+            name="txF3Cls"
+            formControlName="txF3Cls"
+            value="text-field text-field--medium"
+          >
+          <label for="medium3">Groß</label>
+        </div>
+      </div>
+
+      <div class="building-kit__editor__field">
+        <label
+          class="building-kit__editor__field__label"
+          for="txF4Txt">
+          Label für Input 4
+        </label>
+        <input [(ngModel)]="textField4Txt"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="txF4Txt"
+               formControlName="txF4Txt"
+        >
+        <div class="building-kit__editor__field__radio">
+          <input
+            [(ngModel)]="textField4Cls"
+            type="radio"
+            id="tiny4"
+            name="txF4Cls"
+            formControlName="txF4Cls"
+            value="text-field text-field--tiny"
+          >
+          <label for="tiny4">Klein</label>
+          <input
+            [(ngModel)]="textField4Cls"
+            type="radio"
+            id="small4"
+            name="txF4Cls"
+            formControlName="txF4Cls"
+            value="text-field text-field--small"
+          >
+          <label for="small4">Mittel</label>
+          <input
+            [(ngModel)]="textField4Cls"
+            type="radio"
+            id="medium4"
+            name="txF4Cls"
+            formControlName="txF4Cls"
+            value="text-field text-field--medium"
+          >
+          <label for="medium4">Groß</label>
         </div>
       </div>
 
@@ -183,10 +340,54 @@
         </div>
 
         <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-fieldset-headline
+            [fieldsetHeadlineText]="headline2Txt"
+            cdkDrag
+          ></app-fieldset-headline>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-fieldset-headline
+            [fieldsetHeadlineText]="headline3Txt"
+            cdkDrag
+          ></app-fieldset-headline>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
           <app-text-field
             [textFieldLabel]="textField1Txt"
             [textFieldClass]="textField1Cls"
-            [textFieldControl]="'txtField'"
+            [textFieldControl]="'txtField1'"
+            [textFieldReadonly]="false"
+            [textFieldParentForm]="buildingKit"
+          ></app-text-field>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-text-field
+            [textFieldLabel]="textField2Txt"
+            [textFieldClass]="textField2Cls"
+            [textFieldControl]="'txtField2'"
+            [textFieldReadonly]="false"
+            [textFieldParentForm]="buildingKit"
+          ></app-text-field>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-text-field
+            [textFieldLabel]="textField3Txt"
+            [textFieldClass]="textField3Cls"
+            [textFieldControl]="'txtField3'"
+            [textFieldReadonly]="false"
+            [textFieldParentForm]="buildingKit"
+          ></app-text-field>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-text-field
+            [textFieldLabel]="textField4Txt"
+            [textFieldClass]="textField4Cls"
+            [textFieldControl]="'txtField4'"
             [textFieldReadonly]="false"
             [textFieldParentForm]="buildingKit"
           ></app-text-field>
@@ -223,6 +424,10 @@
             [checkboxElementLabelAndValue]="checkbox3Txt"
             [checkboxElementImg]="'assets/icons/office_chair.svg'"
           ></app-checkbox-element>
+        </div>
+
+        <div class="box building-kit__elements__list__box" cdkDrag>
+          <app-seperator></app-seperator>
         </div>
 
         <div class="box building-kit__elements__list__box" cdkDrag>

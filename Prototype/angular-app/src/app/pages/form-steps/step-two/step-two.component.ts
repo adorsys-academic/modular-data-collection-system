@@ -11,6 +11,13 @@ export class StepTwoComponent implements OnInit {
 
   step: FormGroup;
 
+  showPurchasedTicket:boolean = false;
+
+  streetCorrect:boolean = false;
+  houseNrCorrect:boolean = false;
+  plzCorrect:boolean = false;
+  placeCorrect:boolean = false;
+
   constructor(
     private _formBuilder: FormBuilder,
     private formService: FormService
@@ -18,9 +25,9 @@ export class StepTwoComponent implements OnInit {
     this.step = this._formBuilder.group({
       workStreet: ['', Validators.required],
       workHouseNr: ['', Validators.required],
-      workPlz: ['', Validators.required],
+      workPlz: ['', Validators.required, Validators.minLength(5), Validators.maxLength(5)],
       workPlace: ['', Validators.required],
-      distance: ['']
+      distance: ['3,8']
     });
     this.formService.stepReady(this.step, 'two')
   }

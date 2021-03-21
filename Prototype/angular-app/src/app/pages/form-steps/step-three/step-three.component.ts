@@ -11,6 +11,8 @@ export class StepThreeComponent implements OnInit {
 
   step: FormGroup;
 
+  showMoreOptions:boolean = false;
+
   constructor(
     private _formBuilder: FormBuilder,
     private formService: FormService
@@ -20,6 +22,11 @@ export class StepThreeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toggle() {
+    this.showMoreOptions = !this.showMoreOptions;
+    console.log("Options", this.showMoreOptions);
   }
 
 }

@@ -9,6 +9,11 @@ import {FormService} from "../../../form.service";
 })
 export class StepFourComponent implements OnInit {
 
+  step: FormGroup;
+
+  showPurchasedBook:boolean = false;
+  showMoreOptions:boolean = false;
+
   constructor(
     private _formBuilder: FormBuilder,
     private formService: FormService
@@ -20,6 +25,9 @@ export class StepFourComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  step: FormGroup;
+  toggle() {
+    this.showMoreOptions = !this.showMoreOptions;
+    console.log("Options", this.showMoreOptions);
+  }
 
 }

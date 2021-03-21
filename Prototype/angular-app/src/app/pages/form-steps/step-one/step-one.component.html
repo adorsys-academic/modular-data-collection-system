@@ -24,6 +24,11 @@
         [textFieldReadonly]="false"
         [textFieldParentForm]="step"
       ></app-text-field>
+      <!--<div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+        <div *ngIf="firstName.errors.required" class="form__field__error">
+          Name is required.
+        </div>
+      </div>-->
       <app-text-field
         [textFieldLabel]="'Nachname'"
         [textFieldClass]="'text-field text-field--small'"

@@ -15,9 +15,10 @@
   <div class="form__field">
     <app-toggle-button
       [toggleButtonLabel]="'Benötigen Sie Arbeitsmittel?'"
+      (change)="toggle()"
     ></app-toggle-button>
   </div>
-  <div class="form__field">
+  <div *ngIf="showMoreOptions" class="form__field">
     <app-fieldset-headline
       [fieldsetHeadlineText]="'Haben Sie neue Arbeitsmittel gekauft?'"
     >
@@ -32,6 +33,7 @@
         [checkboxElementId]="'books'"
         [checkboxElementLabelAndValue]="'Fachliteratur'"
         [checkboxElementImg]="'assets/icons/book.svg'"
+        (click)="showPurchasedBook=true"
       ></app-checkbox-element>
       <app-checkbox-element
         [checkboxElementId]="'tools'"
@@ -55,6 +57,11 @@
         [checkboxElementLabelAndValue]="'Sonstiges'"
         [checkboxElementImg]="'assets/icons/additional.svg'"
       ></app-checkbox-element>
+    </div>
+    <div *ngIf="showPurchasedBook" class="form__field">
+      <p class="form__field__text">Der Mensch - Anatomie und Physiologie</p>
+      <p class="form__field__text">Gebundene Ausgabe von Johann S. Schwegler, Thieme</p>
+      <p class="form__field__text">29,99€</p>
     </div>
   </div>
   <div class="form__buttons">
