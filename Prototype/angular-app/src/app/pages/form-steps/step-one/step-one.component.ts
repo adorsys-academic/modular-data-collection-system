@@ -27,7 +27,7 @@ export class StepOneComponent implements OnInit {
       branch: ['', Validators.required],
       employment: ['', Validators.required]
     });
-    this.formService.stepReady(this.step, 'one')
+    this.formService.stepReady(this.step, 'one');
   }
 
   ngOnInit(): void {

@@ -2,16 +2,12 @@
 
   <div class="building-kit__editor">
     <div class="building-kit__header">
-      <div class="building-kit__header__headline">
-        <h2>Element Editor:</h2>
-      </div>
-      <div class="building-kit__header__help">
-        <app-help-button
-          [helpButtonClass]="'help-button help-button--editor'"
-          [helpButtonTooltip]="'Im Editor können Sie die Texte und weitere Merkmale' +
-          ' ihrer Formular-Elemente anpassen.'"
-        ></app-help-button>
-      </div>
+      <h2 class="building-kit__header__headline">1. Element Editor:</h2>
+      <p class="building-kit__header__help">
+        Im Editor können Sie Texte und weitere Merkmale
+        der Formular-Elemente anpassen. Jedes Formular-Element hat seinen eigenen
+        Editor-Bereich.
+      </p>
     </div>
     <form [formGroup]="editor">
 
@@ -46,22 +42,8 @@
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
-          for="hl3Txt">
-          Text für Headline 3
-        </label>
-        <input [(ngModel)]="headline3Txt"
-               class="building-kit__editor__field__input"
-               type="text"
-               id="hl3Txt"
-               formControlName="hl3Txt"
-        >
-      </div>
-
-      <div class="building-kit__editor__field">
-        <label
-          class="building-kit__editor__field__label"
           for="txF1Txt">
-          Label für Input 1
+          Label für Text-Feld 1
         </label>
         <input [(ngModel)]="textField1Txt"
                class="building-kit__editor__field__input"
@@ -104,7 +86,7 @@
         <label
           class="building-kit__editor__field__label"
           for="txF2Txt">
-          Label für Input 2
+          Label für Text-Feld 2
         </label>
         <input [(ngModel)]="textField2Txt"
                class="building-kit__editor__field__input"
@@ -147,7 +129,7 @@
         <label
           class="building-kit__editor__field__label"
           for="txF3Txt">
-          Label für Input 3
+          Label für Text-Feld 3
         </label>
         <input [(ngModel)]="textField3Txt"
                class="building-kit__editor__field__input"
@@ -190,7 +172,7 @@
         <label
           class="building-kit__editor__field__label"
           for="txF4Txt">
-          Label für Input 4
+          Label für Text-Feld 4
         </label>
         <input [(ngModel)]="textField4Txt"
                class="building-kit__editor__field__input"
@@ -233,7 +215,7 @@
         <label
           class="building-kit__editor__field__label"
           for="ddF1Txt">
-          Label für Dropdown 1
+          Label für Dropdown-Feld 1
         </label>
         <input [(ngModel)]="dropdownField1Txt"
                class="building-kit__editor__field__input"
@@ -244,7 +226,7 @@
         <label
           class="building-kit__editor__field__label"
           for="ddF1Vls">
-          Werte für Dropdown 1
+          Werte für Dropdown-Feld 1
         </label>
         <input (change)="dropdownValuesChanged()"
                [(ngModel)]="dropdownField1Vls"
@@ -253,13 +235,22 @@
                id="ddF1Vls"
                formControlName="ddF1Vls"
         >
+        <p
+          style="
+          font-size:12px;
+          margin-top:-0.5em;
+          margin-left:1.5em;
+          text-align: left;"
+        >
+          Dropdown-Werte durch Kommas getrennt eingeben!
+        </p>
       </div>
 
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
           for="tb1Txt">
-          Text für Toggle-Button 1
+          Label für Toggle-Button 1
         </label>
         <input [(ngModel)]="toggleButton1Txt"
                class="building-kit__editor__field__input"
@@ -272,8 +263,19 @@
       <div class="building-kit__editor__field">
         <label
           class="building-kit__editor__field__label"
+          for="cbHLTxt">
+          Headline für Icon-Buttons
+        </label>
+        <input [(ngModel)]="checkboxLabel"
+               class="building-kit__editor__field__input"
+               type="text"
+               id="cbHLTxt"
+               formControlName="cbHLTxt"
+        >
+        <label
+          class="building-kit__editor__field__label"
           for="cb1Txt">
-          Text für Checkbox 1
+          Label für Icon-Button 1
         </label>
         <input [(ngModel)]="checkbox1Txt"
                class="building-kit__editor__field__input"
@@ -284,7 +286,7 @@
         <label
           class="building-kit__editor__field__label"
           for="cb2Txt">
-          Text für Checkbox 2
+          Label für Icon-Button 2
         </label>
         <input [(ngModel)]="checkbox2Txt"
                class="building-kit__editor__field__input"
@@ -295,7 +297,7 @@
         <label
           class="building-kit__editor__field__label"
           for="cb3Txt">
-          Text für Checkbox 3
+          Label für Icon-Button 3
         </label>
         <input [(ngModel)]="checkbox3Txt"
                class="building-kit__editor__field__input"
@@ -311,16 +313,12 @@
 
     <div class="container building-kit__elements">
       <div class="building-kit__header">
-        <div class="building-kit__header__headline">
-          <h2>Elemente:</h2>
-        </div>
-        <div class="building-kit__header__help">
-          <app-help-button
-            [helpButtonClass]="'help-button help-button--editor'"
-            [helpButtonTooltip]="'Hier befinden sich die verschiedenen Elemente die sie' +
-            ' verwenden können. Ziehen Sie diese einfach zum Feld `Formular:` um sie diesem hinzuzufügen.'"
-          ></app-help-button>
-        </div>
+        <h2 class="building-kit__header__headline">2. Elemente: </h2>
+        <p class="building-kit__header__help">
+          Hier befinden sich die verschiedenen Elemente die Sie verwenden können.
+          Verschieben Sie diese einfach mit Hilfe von Drag and Drop
+          zum weißen Feld bei "3. Formular:" um sie dem Formular hinzuzufügen.
+        </p>
       </div>
 
       <div
@@ -329,6 +327,7 @@
         [cdkDropListData]="sidebar"
         cdkDropListConnectedTo="[mainList]"
         class="list building-kit__elements__list"
+        cdkDropListSortingDisabled
         (cdkDropListDropped)="drop($event)"
       >
 
@@ -342,13 +341,6 @@
         <div class="box building-kit__elements__list__box" cdkDrag>
           <app-fieldset-headline
             [fieldsetHeadlineText]="headline2Txt"
-            cdkDrag
-          ></app-fieldset-headline>
-        </div>
-
-        <div class="box building-kit__elements__list__box" cdkDrag>
-          <app-fieldset-headline
-            [fieldsetHeadlineText]="headline3Txt"
             cdkDrag
           ></app-fieldset-headline>
         </div>
@@ -409,6 +401,9 @@
         </div>
 
         <div class="box building-kit__elements__list__box" cdkDrag>
+          <div class="cb-style">
+          <p class="cb-style__p">{{checkboxLabel}}</p>
+            <div class="cb-style__cbs">
           <app-checkbox-element
             [checkboxElementId]="'cb1'"
             [checkboxElementLabelAndValue]="checkbox1Txt"
@@ -424,6 +419,8 @@
             [checkboxElementLabelAndValue]="checkbox3Txt"
             [checkboxElementImg]="'assets/icons/office_chair.svg'"
           ></app-checkbox-element>
+            </div>
+          </div>
         </div>
 
         <div class="box building-kit__elements__list__box" cdkDrag>
@@ -440,16 +437,17 @@
 
 
     <div class="container building-kit__form">
+
       <div class="building-kit__header">
-        <div class="building-kit__header__headline">
-          <h2>Formular:</h2>
-        </div>
-        <div class="building-kit__header__help">
-          <app-help-button
-            [helpButtonClass]="'help-button help-button--editor'"
-            [helpButtonTooltip]="'Hier sehen Sie die Vorschau, wie das fertige Formular aussehen wird.'"
-          ></app-help-button>
-        </div>
+        <h2 class="building-kit__header__headline">3. Formular: </h2>
+        <p class="building-kit__header__help">
+          Hier sehen Sie die Vorschau, wie das fertige Formular aussehen wird.
+          Verschieben Sie die Elemente nach oben oder unten um sie an die gewünschte
+          Position zu setzen.
+          <br>
+          <br>
+          <br>
+        </p>
       </div>
 
       <div

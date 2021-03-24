@@ -6,25 +6,25 @@
 
   &__header {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
 
       &__headline {
         display: flex;
-        flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
-        margin-left: 2em;
-        flex-grow: 1;
+        text-align: left !important;
+        margin: 1em 1em 0.5em 1em;
       }
 
       &__help {
+        font-size: 16px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-right: 1em;
-        margin-bottom: 1em;
+        justify-content: flex-start;
+        text-align: left !important;
+        margin: 0 1em 0 2em;
+        padding-bottom: 0.5em;
+        border-bottom: 2px solid $GRAY-DARK;
+        border-radius: 2px;
       }
   }
 
@@ -52,7 +52,7 @@
         margin: 0 1em 1em 1em;
         font-family: URWGeometricSemiBold, sans-serif;
         font-size: 18px;
-        color: $GRAY-DARK;
+        color: $GRAY-PLACEHOLDER;
       }
 
       input:focus {
@@ -113,7 +113,7 @@
 
     &__list {
       border: none;
-      min-height: 60px;
+      min-height: 120px;
       background: $WHITE;
       border-radius: 15px;
       overflow: hidden;
@@ -124,6 +124,25 @@
     &__list * {
       border: none;
     }
+  }
+}
+
+.cb-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__p {
+    text-align: left !important;
+    margin: 0 0 1.5em 1em;
+    border-bottom: 2px solid $GRAY-MEDIUM;
+    border-radius: 2px;
+  }
+
+  &__cbs {
+    display: flex;
+    flex-direction: row;
+
   }
 }
 
@@ -195,3 +214,10 @@
 .list.cdk-drop-list-dragging .box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
+/*.example-custom-placeholder {
+   background: #ccc;
+   border: dotted 3px #999;
+   min-height: 60px;
+   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+ }*/

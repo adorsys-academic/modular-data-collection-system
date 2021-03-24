@@ -1,15 +1,7 @@
 <form class="form" #formOne="ngForm" [formGroup]="step">
   <div class="form__line"></div>
   <div class="form__header">
-    <div class="form__header__headline">
-      <h2>ALLGEMEINES</h2>
-    </div>
-    <div class="form__header__help">
-      <app-help-button
-        [helpButtonClass]="'help-button help-button--primary'"
-        [helpButtonTooltip]="'Geben Sie hier die Daten zu ihrer Person und ihrem Beruf an.'"
-      ></app-help-button>
-    </div>
+    <h2>ALLGEMEINES</h2>
   </div>
   <div class="form__field">
     <app-fieldset-headline
@@ -24,11 +16,6 @@
         [textFieldReadonly]="false"
         [textFieldParentForm]="step"
       ></app-text-field>
-      <!--<div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
-        <div *ngIf="firstName.errors.required" class="form__field__error">
-          Name is required.
-        </div>
-      </div>-->
       <app-text-field
         [textFieldLabel]="'Nachname'"
         [textFieldClass]="'text-field text-field--small'"

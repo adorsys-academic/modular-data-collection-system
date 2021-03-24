@@ -16,21 +16,21 @@ export class BuildingKitPageComponent implements OnInit {
 
   headline1Txt:string = 'Headline 1';
   headline2Txt:string = 'Headline 2';
-  headline3Txt:string = 'Headline 3';
-  textField1Txt:string = 'Label Input 1';
+  textField1Txt:string = 'Label Text-Feld 1';
   textField1Cls:string = 'text-field text-field--small';
-  textField2Txt:string = 'Label Input 2';
+  textField2Txt:string = 'Label Text-Feld 2';
   textField2Cls:string = 'text-field text-field--small';
-  textField3Txt:string = 'Label Input 3';
+  textField3Txt:string = 'Label Text-Feld 3';
   textField3Cls:string = 'text-field text-field--small';
-  textField4Txt:string = 'Label Input 4';
+  textField4Txt:string = 'Label Text-Feld 4';
   textField4Cls:string = 'text-field text-field--small';
-  dropdownField1Txt:string = 'Label Dropdown 1';
+  dropdownField1Txt:string = 'Label Dropdown-Feld 1';
   dropdownField1Vls:string[] = ['1', '2', '3', '4', '5'];
   toggleButton1Txt:string = 'Label Toggle-Button 1';
-  checkbox1Txt:string = 'Label Checkbox 1';
-  checkbox2Txt:string = 'Label Checkbox 2';
-  checkbox3Txt:string = 'Label Checkbox 3';
+  checkboxLabel:string = 'Headline Icon-Buttons';
+  checkbox1Txt:string = 'Label Icon-Button 1';
+  checkbox2Txt:string = 'Label Icon-Button 2';
+  checkbox3Txt:string = 'Label Icon-Button 3';
 
   constructor(
     private _formBuilder: FormBuilder
@@ -45,7 +45,6 @@ export class BuildingKitPageComponent implements OnInit {
     this.editor = this._formBuilder.group({
       hl1Txt: [''],
       hl2Txt: [''],
-      hl3Txt: [''],
       txF1Txt: [''],
       txF1Cls: [''],
       txF2Txt: [''],
@@ -57,6 +56,7 @@ export class BuildingKitPageComponent implements OnInit {
       ddF1Txt: [''],
       ddF1Vls: [''],
       tb1Txt: [''],
+      cbHLTxt: [''],
       cb1Txt: [''],
       cb2Txt: [''],
       cb3Txt: [''],

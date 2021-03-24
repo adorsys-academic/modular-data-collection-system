@@ -1,16 +1,7 @@
 <form class="form" #formFive="ngForm" [formGroup]="step">
   <div class="form__line"></div>
   <div class="form__header">
-    <div class="form__header__headline">
-      <h2>ARBEITSKLEIDUNG</h2>
-    </div>
-    <div class="form__header__help">
-      <app-help-button
-        [helpButtonClass]="'help-button help-button--primary'"
-        [helpButtonTooltip]="'Wenn Sie bei ihrer Arbeit bestimmte Arbeitskleidung benötigen,' +
-        ' dann geben Sie hier an, ob und welche Ausgaben Sie dafür getätigt haben.'"
-      ></app-help-button>
-    </div>
+    <h2>ARBEITSKLEIDUNG</h2>
   </div>
   <div class="form__field">
     <app-toggle-button
