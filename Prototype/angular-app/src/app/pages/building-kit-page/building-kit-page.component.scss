@@ -77,7 +77,7 @@
     //flex-grow: 1;
 
     &__list {
-      border: solid 1px $GRAY-MEDIUM;
+      border: solid 1px $GRAY-DARK;
       min-height: 60px;
       background: $WHITE;
       border-radius: 15px;
@@ -87,7 +87,7 @@
 
       &__box {
         padding: 2em 1em 1em 1em;
-        border-bottom: solid 1px $GRAY-MEDIUM;
+        border-bottom: solid 1px $GRAY-DARK;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -121,7 +121,7 @@
     }
 
     :empty {
-      border: 3px dashed $RED-ERROR;
+      border: 3px dashed $GRAY-DARK;
     }
 
     &__list * {
